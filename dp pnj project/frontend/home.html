@@ -1,0 +1,1949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your modern e-commerce store with customizable products">
+    <meta name="keywords" content="e-commerce, custom design, t-shirts, fashion">
+    <title>Responsive Tailwind Navbar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/footer.css">
+      <!-- Favicon -->
+      <link rel="icon" type="image/png" href="favicon.png">
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        rel="stylesheet"
+        
+    />
+   
+</head>
+<body>
+<div class="main-container">
+
+        <!-- Top Search Bar Section -->
+        <div class="search-wrapper fixed w-full top-0 z-40">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+                <div class="search-container relative">
+                    <div class="flex items-center bg-white rounded-lg shadow-sm">
+                        <div class="flex-1 relative">
+                            <input type="text" 
+                                   class="search-input w-full pl-12 pr-4 py-3 rounded-lg text-gray-700 focus:outline-none"
+                                   placeholder="Search for products, brands and more...">
+                            <div class="absolute left-4 top-1/2 transform -translate-y-1/2">
+                                <i class="fas fa-search text-gray-400"></i>
+                            </div>
+                        </div>
+                        <div class="px-4 border-l border-gray-200">
+                            <select class="py-3 text-gray-600 focus:outline-none bg-transparent">
+                                <option>All Categories</option>
+                                <option>Men</option>
+                                <option>Women</option>
+                                <option>Accessories</option>
+                            </select>
+                        </div>
+                    </div>
+    
+                    <!-- Search Suggestions -->
+                    <div class="search-suggestions absolute w-full bg-white mt-2 rounded-lg shadow-lg z-45 hidden">
+                        <!-- Recent Searches -->
+                        <div class="p-4 border-b border-gray-100">
+                            <h3 class="text-sm font-semibold text-gray-600 mb-2">Recent Searches</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="search-tag px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-600 cursor-pointer">
+                                    T-shirts
+                                </span>
+                                <span class="search-tag px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-600 cursor-pointer">
+                                    Hoodies
+                                </span>
+                                <span class="search-tag px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-600 cursor-pointer">
+                                    Jeans
+                                </span>
+                            </div>
+                        </div>
+    
+                        <!-- Trending Searches -->
+                        <div class="p-4">
+                            <h3 class="text-sm font-semibold text-gray-600 mb-2">Trending</h3>
+                            <div class="space-y-2">
+                                <div class="flex items-center space-x-3 p-2 hover:bg-gray-50 rounded cursor-pointer">
+                                    <i class="fas fa-trending-up text-yellow-500"></i>
+                                    <span class="text-gray-700">Summer Collection 2024</span>
+                                </div>
+                                <div class="flex items-center space-x-3 p-2 hover:bg-gray-50 rounded cursor-pointer">
+                                    <i class="fas fa-trending-up text-yellow-500"></i>
+                                    <span class="text-gray-700">Graphic T-shirts</span>
+                                </div>
+                                <div class="flex items-center space-x-3 p-2 hover:bg-gray-50 rounded cursor-pointer">
+                                    <i class="fas fa-trending-up text-yellow-500"></i>
+                                    <span class="text-gray-700">Custom Designs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!-- Main Navigation -->
+    <nav class="nav-wrapper sticky top-[73px] bg-white shadow-md z-30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <!-- Left Section -->
+                <div class="flex items-center">
+                    <!-- Logo -->
+                    <div class="flex-shrink-0 flex items-center">
+                        <h1 class="text-2xl font-bold text-gray-800 hover:text-yellow-400 transition-colors duration-300">
+                            BEWAKOOF
+                        </h1>
+                    </div>
+
+                    <!-- Desktop Navigation -->
+                    <div class="hidden md:ml-6 md:flex md:space-x-4">
+                        <a href="home.html" class="nav-link px-3 py-2 text-sm font-medium text-gray-700 hover:text-yellow-500">
+                            Home
+                        </a>
+
+                        <!-- Shop Dropdown -->
+                        <div class="nav-item relative group">
+                            <button href="shop.html" class="nav-link px-3 py-2 text-sm font-medium text-gray-700 hover:text-yellow-500 inline-flex items-center">
+                                Shop
+                                <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <div class="nav-dropdown absolute left-0 w-56 bg-white rounded-md shadow-lg py-2 mt-2 z-35">
+                                <div class="grid grid-cols-2 gap-2">
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Men's Fashion</a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Women's Fashion</a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Accessories</a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">New Arrivals</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#" class="nav-link px-3 py-2 text-sm font-medium text-gray-700 hover:text-yellow-500">
+                            Customize Design
+                        </a>
+
+                        <div class="nav-item relative group">
+                            <button class="nav-link px-3 py-2 text-sm font-medium text-gray-700 hover:text-yellow-500 inline-flex items-center">
+                                Pages
+                                <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <div class="nav-dropdown absolute left-0 w-56 bg-white rounded-md shadow-lg py-2 mt-2 z-35">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">About Us</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Contact</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">FAQ</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Privacy Policy</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Terms & Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Section -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <!-- Account Dropdown -->
+                    <div class="nav-item relative group">
+                        <button class="nav-link text-gray-700 hover:text-yellow-500 flex items-center">
+                            <i class="far fa-user text-xl mr-2"></i>
+                            <span class="text-sm">Account</span>
+                        </button>
+                        <div class="nav-dropdown absolute right-0 w-48 bg-white rounded-md shadow-lg py-2 mt-2 z-35">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Profile</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Orders</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Settings</a>
+                            <div class="border-t border-gray-100 my-1"></div>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Sign Out</a>
+                        </div>
+                    </div>
+
+                    <!-- Wishlist -->
+                    <button class="nav-link text-gray-700 hover:text-yellow-500 relative">
+                        <i class="far fa-heart text-xl"></i>
+                        <span class="absolute -top-2 -right-2 bg-yellow-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">0</span>
+                    </button>
+
+                    <!-- Cart -->
+                    <button class="nav-link text-gray-700 hover:text-yellow-500 relative">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                        <span class="absolute -top-2 -right-2 bg-yellow-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">0</span>
+                    </button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-yellow-500 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu-alt fixed inset-0 invisible opacity-0 z-[60]">
+        <!-- Overlay Background -->
+        <div class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm transition-opacity"></div>
+        
+        <!-- Menu Content -->
+        <div class="menu-panel fixed right-0 top-0 bottom-0 w-[300px] bg-white transform translate-x-full transition-transform duration-300 ease-in-out">
+            <!-- Header -->
+            <div class="menu-header flex items-center justify-between p-4 border-b border-gray-100">
+                <h2 class="text-xl font-bold text-gray-800">Menu</h2>
+                <button id="mobile-menu-close" class="close-btn p-2 rounded-full hover:bg-gray-100 transition-colors">
+                    <i class="fas fa-times text-xl text-gray-600"></i>
+                </button>
+            </div>
+
+            <!-- Menu Content Wrapper -->
+            <div class="menu-content h-[calc(100%-64px)] overflow-y-auto">
+                <!-- User Section -->
+                <div class="user-section p-4 bg-gray-50">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center">
+                            <i class="far fa-user text-yellow-600"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-600">Welcome</p>
+                            <button class="text-yellow-600 font-medium hover:text-yellow-700">Sign In / Register</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <nav class="py-2">
+                    <!-- Home -->
+                    <a href="#" class="menu-item flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50">
+                        <i class="fas fa-home w-6"></i>
+                        <span>Home</span>
+                    </a>
+
+                    <!-- Shop Dropdown -->
+                    <div class="menu-dropdown">
+                        <button class="menu-item w-full flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-gray-50">
+                            <div class="flex items-center">
+                                <i class="fas fa-shopping-bag w-6"></i>
+                                <span>Shop</span>
+                            </div>
+                            <i class="fas fa-chevron-down text-sm transition-transform"></i>
+                        </button>
+                        <div class="submenu hidden bg-gray-50">
+                            <a href="#" class="submenu-item block px-4 py-2 pl-12 text-gray-600 hover:bg-gray-100">
+                                Men's Fashion
+                            </a>
+                            <a href="#" class="submenu-item block px-4 py-2 pl-12 text-gray-600 hover:bg-gray-100">
+                                Women's Fashion
+                            </a>
+                            <a href="#" class="submenu-item block px-4 py-2 pl-12 text-gray-600 hover:bg-gray-100">
+                                Accessories
+                            </a>
+                            <a href="#" class="submenu-item block px-4 py-2 pl-12 text-gray-600 hover:bg-gray-100">
+                                New Arrivals
+                            </a>
+                        </div>
+
+
+                        <button class="menu-item w-full flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-gray-50">
+                            <div class="flex items-center">
+                                <i class="fas fa-file-alt w-6"></i>
+                                <span>Pages</span>
+                            </div>
+                            <i class="fas fa-chevron-down text-sm transition-transform"></i>
+                        </button>
+                        <div class="submenu hidden bg-gray-50">
+                            <a href="#" class="submenu-item block px-4 py-2 pl-12 text-gray-600 hover:bg-gray-100">About Us</a>
+                            <a href="#" class="submenu-item block px-4 py-2 pl-12 text-gray-600 hover:bg-gray-100">Contact</a>
+                            <a href="#" class="submenu-item block px-4 py-2 pl-12 text-gray-600 hover:bg-gray-100">FAQ</a>
+                            <a href="#" class="submenu-item block px-4 py-2 pl-12 text-gray-600 hover:bg-gray-100">Privacy Policy</a>
+                            <a href="#" class="submenu-item block px-4 py-2 pl-12 text-gray-600 hover:bg-gray-100">Terms & Conditions</a>
+                        </div>
+                    </div>
+
+                    
+
+                    <!-- Other Links -->
+                    <a href="#" class="menu-item flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50">
+                        <i class="fas fa-palette w-6"></i>
+                        <span>Customize Design</span>
+                    </a>
+                    <a href="#" class="menu-item flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50">
+                        <i class="fas fa-heart w-6"></i>
+                        <span>Wishlist</span>
+                    </a>
+                    <a href="#" class="menu-item flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50">
+                        <i class="fas fa-shopping-cart w-6"></i>
+                        <span>Cart</span>
+                    </a>
+                </nav>
+
+                <!-- Bottom Section -->
+                <div class="border-t border-gray-100 p-4 mt-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <a href="#" class="flex items-center text-gray-600 hover:text-yellow-600">
+                            <i class="fas fa-headset mr-2"></i>
+                            <span>Support</span>
+                        </a>
+                        <a href="#" class="flex items-center text-gray-600 hover:text-yellow-600">
+                            <i class="fas fa-cog mr-2"></i>
+                            <span>Settings</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- ... existing code ... -->
+
+<!-- Main Hero Slider Section -->
+<section class="sld-hero-section">
+    <div class="sld-slider-container">
+        <!-- Main Slider -->
+        <div class="sld-slider">
+            <!-- Slide 1 -->
+            <div class="sld-slide">
+                <div class="sld-slide-background">
+                    <img 
+                        src="images/hero/slide-1.jpg" 
+                        alt="Fashion Collection 2024" 
+                        class="sld-bg-image"
+                        loading="lazy"
+                    >
+                    <div class="sld-overlay"></div>
+                </div>
+                <div class="sld-content">
+                    <div class="sld-content-wrapper">
+                        <span class="sld-badge">New Collection 2024</span>
+                        <h2 class="sld-title">
+                            Discover Your <span class="sld-highlight">Unique Style</span>
+                        </h2>
+                        <p class="sld-description">
+                            Explore our latest collection of premium fashion items designed to make you stand out.
+                        </p>
+                        <div class="sld-button-group">
+                            <button class="sld-btn sld-btn-primary">
+                                <span class="sld-btn-content">
+                                    <span class="sld-btn-text">Shop Now</span>
+                                    <i class="fas fa-shopping-bag sld-btn-icon"></i>
+                                </span>
+                                <span class="sld-btn-bg"></span>
+                            </button>
+                            <button class="sld-btn sld-btn-secondary">
+                                <span class="sld-btn-content">
+                                    <span class="sld-btn-text">Learn More</span>
+                                    <i class="fas fa-arrow-right sld-btn-icon"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="sld-slide">
+                <div class="sld-slide-background">
+                    <img 
+                        src="images/hero/slide-2.jpg" 
+                        alt="Summer Collection" 
+                        class="sld-bg-image"
+                        loading="lazy"
+                    >
+                    <div class="sld-overlay"></div>
+                </div>
+                <div class="sld-content">
+                    <div class="sld-content-wrapper">
+                        <span class="sld-badge">Summer Collection</span>
+                        <h2 class="sld-title">
+                            Summer <span class="sld-highlight">Paradise</span>
+                        </h2>
+                        <p class="sld-description">
+                            Get ready for summer with our exclusive collection. Up to 50% off on selected items.
+                        </p>
+                        <div class="sld-button-group">
+                            <button class="sld-btn sld-btn-primary">
+                                <span class="sld-btn-content">
+                                    <span class="sld-btn-text">Shop Collection</span>
+                                    <i class="fas fa-shopping-bag sld-btn-icon"></i>
+                                </span>
+                                <span class="sld-btn-bg"></span>
+                            </button>
+                            <button class="sld-btn sld-btn-secondary">
+                                <span class="sld-btn-content">
+                                    <span class="sld-btn-text">View Offers</span>
+                                    <i class="fas fa-tag sld-btn-icon"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="sld-slide">
+                <div class="sld-slide-background">
+                    <img 
+                        src="images/hero/slide-3.jpg" 
+                        alt="Special Offers" 
+                        class="sld-bg-image"
+                        loading="lazy"
+                    >
+                    <div class="sld-overlay"></div>
+                </div>
+                <div class="sld-content">
+                    <div class="sld-content-wrapper">
+                        <span class="sld-badge">Limited Time Offer</span>
+                        <h2 class="sld-title">
+                            Get <span class="sld-highlight">30% Off</span>
+                        </h2>
+                        <p class="sld-description">
+                            Special discount on our premium collection. Don't miss out on these amazing deals!
+                        </p>
+                        <div class="sld-button-group">
+                            <button class="sld-btn sld-btn-primary">
+                                <span class="sld-btn-content">
+                                    <span class="sld-btn-text">Shop Now</span>
+                                    <i class="fas fa-tag sld-btn-icon"></i>
+                                </span>
+                                <span class="sld-btn-bg"></span>
+                            </button>
+                            <button class="sld-btn sld-btn-secondary">
+                                <span class="sld-btn-content">
+                                    <span class="sld-btn-text">Learn More</span>
+                                    <i class="fas fa-arrow-right sld-btn-icon"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Controls -->
+        <div class="sld-controls">
+            <!-- Navigation Arrows -->
+            <button class="sld-nav sld-nav-prev" aria-label="Previous slide">
+                <span class="sld-nav-button">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+            </button>
+            <button class="sld-nav sld-nav-next" aria-label="Next slide">
+                <span class="sld-nav-button">
+                    <i class="fas fa-chevron-right"></i>
+                </span>
+            </button>
+
+            <!-- Progress Bar -->
+            <div class="sld-progress">
+                <div class="sld-progress-bar"></div>
+            </div>
+
+            <!-- Navigation Dots -->
+            <div class="sld-dots"></div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Shopping Categories Section -->
+<section class="categories-section relative overflow-hidden py-20">
+    <!-- Animated Background Elements -->
+    <div class="design-elements">
+        <div class="circle-1 animate-float"></div>
+        <div class="circle-2 animate-float-delay-2"></div>
+        <div class="circle-3 animate-float-delay-4"></div>
+        <div class="rectangle-1 animate-pulse-slow"></div>
+        <div class="rectangle-2 animate-pulse-slow-delay-2"></div>
+        <div class="rectangle-3 animate-pulse-slow-delay-4"></div>
+        <div class="dots-pattern"></div>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
+        <!-- Section Header -->
+        <div class="text-center mb-16" data-aos="fade-up">
+            <span class="inline-block px-4 py-2 bg-yellow-100 text-yellow-800 rounded-full text-sm font-semibold mb-4">
+                Explore Our Collections
+            </span>
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Shop by Categories
+            </h2>
+            <div class="flex items-center justify-center gap-2 mb-6">
+                <div class="w-8 h-1 bg-yellow-500 rounded-full"></div>
+                <div class="w-2 h-1 bg-yellow-300 rounded-full"></div>
+                <div class="w-2 h-1 bg-yellow-300 rounded-full"></div>
+            </div>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+                Discover our curated collection of premium customizable products
+            </p>
+        </div>
+
+        <!-- Categories Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 lg:gap-8" data-aos="fade-up" data-aos-delay="200">
+            <!-- T-shirt Category -->
+            <div class="category-card group">
+                <div class="category-wrapper rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-500">
+                    <div class="category-image-container relative overflow-hidden aspect-square">
+                        <div class="category-image transform group-hover:scale-110 transition-transform duration-700">
+                            <img 
+                                src="imagesss/tshirt 2.jpg"
+                                alt="T-Shirt Collection" 
+                                class="w-full h-full object-cover"
+                                loading="lazy"
+                            >
+                        </div>
+                        <div class="category-overlay absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            <div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                                <span class="text-white font-semibold block mb-2">20+ Designs</span>
+                                <button class="view-more-btn">
+                                    View Collection
+                                    <svg class="w-5 h-5 ml-2 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="category-badge">
+                            <span class="badge-text">Popular</span>
+                        </div>
+                    </div>
+                    <div class="category-content p-4 text-center">
+                        <h3 class="category-title text-lg font-bold text-gray-900 mb-1">T-Shirts</h3>
+                        <p class="text-sm text-gray-600">Starting from ₹499</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Long-sleeves Category -->
+            <div class="category-card group">
+                <div class="category-wrapper rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-500">
+                    <div class="category-image-container relative overflow-hidden aspect-square">
+                        <div class="category-image transform group-hover:scale-110 transition-transform duration-700">
+                            <img 
+                                src="imagesss/sleeve 2.jpg"
+                                alt="Long-sleeves Collection" 
+                                class="w-full h-full object-cover"
+                                loading="lazy"
+                            >
+                        </div>
+                        <div class="category-overlay absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            <div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                                <span class="text-white font-semibold block mb-2">15+ Designs</span>
+                                <button class="view-more-btn">
+                                    View Collection
+                                    <svg class="w-5 h-5 ml-2 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="category-badge">
+                            <span class="badge-text">New</span>
+                        </div>
+                    </div>
+                    <div class="category-content p-4 text-center">
+                        <h3 class="category-title text-lg font-bold text-gray-900 mb-1">Long-sleeves</h3>
+                        <p class="text-sm text-gray-600">Starting from ₹699</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mousepad Category -->
+            <div class="category-card group">
+                <div class="category-wrapper rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-500">
+                    <div class="category-image-container relative overflow-hidden aspect-square">
+                        <div class="category-image transform group-hover:scale-110 transition-transform duration-700">
+                            <img 
+                                src="imagesss/pad 2.jpg"
+                                alt="Mousepad Collection" 
+                                class="w-full h-full object-cover"
+                                loading="lazy"
+                            >
+                        </div>
+                        <div class="category-overlay absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            <div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                                <span class="text-white font-semibold block mb-2">10+ Designs</span>
+                                <button class="view-more-btn">
+                                    View Collection
+                                    <svg class="w-5 h-5 ml-2 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category-content p-4 text-center">
+                        <h3 class="category-title text-lg font-bold text-gray-900 mb-1">Mousepads</h3>
+                        <p class="text-sm text-gray-600">Starting from ₹299</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hoodies Category -->
+            <div class="category-card group">
+                <div class="category-wrapper rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-500">
+                    <div class="category-image-container relative overflow-hidden aspect-square">
+                        <div class="category-image transform group-hover:scale-110 transition-transform duration-700">
+                            <img 
+                                src="imagesss/hoody 1.jpg"
+                                alt="Hoodies Collection" 
+                                class="w-full h-full object-cover"
+                                loading="lazy"
+                            >
+                        </div>
+                        <div class="category-overlay absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            <div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                                <span class="text-white font-semibold block mb-2">25+ Designs</span>
+                                <button class="view-more-btn">
+                                    View Collection
+                                    <svg class="w-5 h-5 ml-2 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="category-badge">
+                            <span class="badge-text">Trending</span>
+                        </div>
+                    </div>
+                    <div class="category-content p-4 text-center">
+                        <h3 class="category-title text-lg font-bold text-gray-900 mb-1">Hoodies</h3>
+                        <p class="text-sm text-gray-600">Starting from ₹899</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cups Category -->
+            <div class="category-card group">
+                <div class="category-wrapper rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-500">
+                    <div class="category-image-container relative overflow-hidden aspect-square">
+                        <div class="category-image transform group-hover:scale-110 transition-transform duration-700">
+                            <img 
+                                src="imagesss/cup 1.jpg"
+                                alt="Cups Collection" 
+                                class="w-full h-full object-cover"
+                                loading="lazy"
+                            >
+                        </div>
+                        <div class="category-overlay absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            <div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                                <span class="text-white font-semibold block mb-2">12+ Designs</span>
+                                <button class="view-more-btn">
+                                    View Collection
+                                    <svg class="w-5 h-5 ml-2 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category-content p-4 text-center">
+                        <h3 class="category-title text-lg font-bold text-gray-900 mb-1">Cups</h3>
+                        <p class="text-sm text-gray-600">Starting from ₹399</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Products Section -->
+<section class="ddk-section-container ddk-products-section">
+    <!-- Tabs Navigation -->
+    <div class="ddk-tabs-container">
+        <button class="ddk-tab-btn ddk-active" data-tab="new-arrivals">
+            <span class="ddk-tab-icon"><i class="fas fa-star"></i></span>
+            <span class="ddk-tab-text">New Arrivals</span>
+        </button>
+        <button class="ddk-tab-btn" data-tab="best-sellers">
+            <span class="ddk-tab-icon"><i class="fas fa-crown"></i></span>
+            <span class="ddk-tab-text">Best Sellers</span>
+        </button>
+    </div>
+
+    <!-- New Arrivals Content -->
+    <div class="ddk-tab-content ddk-active" id="new-arrivals">
+        <div class="ddk-product-grid">
+            <!-- New Arrival Product 1 -->
+            <div class="ddk-product-card" data-id="na1">
+                <div class="ddk-product-image-container">
+                    <a href="#product-details" class="ddk-product-link">
+                        <img src="imagesss/tshirt 1.jpg" alt="Classic White T-Shirt" class="ddk-product-image">
+                        <div class="ddk-product-overlay">
+                            <button class="ddk-quick-view-btn">Quick View</button>
+                        </div>
+                    </a>
+                    <div class="ddk-product-actions">
+                        <button class="ddk-wishlist-btn" aria-label="Add to Wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="ddk-cart-btn" aria-label="Add to Cart">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                    <div class="ddk-badge-container">
+                        <span class="ddk-badge ddk-new-badge">NEW</span>
+                        <span class="ddk-badge ddk-discount-badge">-60%</span>
+                    </div>
+                </div>
+                <div class="ddk-product-info">
+                    <div class="ddk-product-category">T-Shirts</div>
+                    <h3 class="ddk-product-title">Classic White T-Shirt</h3>
+                    <div class="ddk-product-rating">
+                        <div class="ddk-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="ddk-rating-count">(42)</span>
+                    </div>
+                    <div class="ddk-price">
+                        <span class="ddk-current-price">₹499</span>
+                        <span class="ddk-original-price">₹999</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New Arrival Product 2 -->
+            <div class="ddk-product-card" data-id="na2">
+                <div class="ddk-product-image-container">
+                    <a href="#product-details" class="ddk-product-link">
+                        <img src="imagesss/hoody 2.jpg" alt="Premium Black Hoodie" class="ddk-product-image">
+                        <div class="ddk-product-overlay">
+                            <button class="ddk-quick-view-btn">Quick View</button>
+                        </div>
+                    </a>
+                    <div class="ddk-product-actions">
+                        <button class="ddk-wishlist-btn" aria-label="Add to Wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="ddk-cart-btn" aria-label="Add to Cart">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                    <div class="ddk-badge-container">
+                        <span class="ddk-badge ddk-new-badge">NEW</span>
+                        <span class="ddk-badge ddk-discount-badge">-50%</span>
+                    </div>
+                </div>
+                <div class="ddk-product-info">
+                    <div class="ddk-product-category">Hoodies</div>
+                    <h3 class="ddk-product-title">Premium Black Hoodie</h3>
+                    <div class="ddk-product-rating">
+                        <div class="ddk-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ddk-rating-count">(38)</span>
+                    </div>
+                    <div class="ddk-price">
+                        <span class="ddk-current-price">₹899</span>
+                        <span class="ddk-original-price">₹1799</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New Arrival Product 3 -->
+            <div class="ddk-product-card" data-id="na3">
+                <div class="ddk-product-image-container">
+                    <a href="#product-details" class="ddk-product-link">
+                        <img src="imagesss/cup 2.jpg" alt="Modern Coffee Mug" class="ddk-product-image">
+                        <div class="ddk-product-overlay">
+                            <button class="ddk-quick-view-btn">Quick View</button>
+                        </div>
+                    </a>
+                    <div class="ddk-product-actions">
+                        <button class="ddk-wishlist-btn" aria-label="Add to Wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="ddk-cart-btn" aria-label="Add to Cart">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                    <div class="ddk-badge-container">
+                        <span class="ddk-badge ddk-new-badge">NEW</span>
+                        <span class="ddk-badge ddk-discount-badge">-40%</span>
+                    </div>
+                </div>
+                <div class="ddk-product-info">
+                    <div class="ddk-product-category">Accessories</div>
+                    <h3 class="ddk-product-title">Modern Coffee Mug</h3>
+                    <div class="ddk-product-rating">
+                        <div class="ddk-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span class="ddk-rating-count">(29)</span>
+                    </div>
+                    <div class="ddk-price">
+                        <span class="ddk-current-price">₹299</span>
+                        <span class="ddk-original-price">₹599</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New Arrival Product 4 -->
+            <div class="ddk-product-card" data-id="na4">
+                <div class="ddk-product-image-container">
+                    <a href="#product-details" class="ddk-product-link">
+                        <img src="imagesss/pad 2.jpg" alt="Gaming Mousepad" class="ddk-product-image">
+                        <div class="ddk-product-overlay">
+                            <button class="ddk-quick-view-btn">Quick View</button>
+                        </div>
+                    </a>
+                    <div class="ddk-product-actions">
+                        <button class="ddk-wishlist-btn" aria-label="Add to Wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="ddk-cart-btn" aria-label="Add to Cart">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                    <div class="ddk-badge-container">
+                        <span class="ddk-badge ddk-new-badge">NEW</span>
+                        <span class="ddk-badge ddk-discount-badge">-45%</span>
+                    </div>
+                </div>
+                <div class="ddk-product-info">
+                    <div class="ddk-product-category">Gaming</div>
+                    <h3 class="ddk-product-title">Gaming Mousepad</h3>
+                    <div class="ddk-product-rating">
+                        <div class="ddk-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="ddk-rating-count">(35)</span>
+                    </div>
+                    <div class="ddk-price">
+                        <span class="ddk-current-price">₹399</span>
+                        <span class="ddk-original-price">₹799</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New Arrival Product 5 -->
+            <!-- <div class="ddk-product-card" data-id="na5">
+                <div class="ddk-product-image-container">
+                    <a href="#product-details" class="ddk-product-link">
+                        <img src="imagesss/tshirt 2.jpg" alt="Designer Graphic Tee" class="ddk-product-image">
+                        <div class="ddk-product-overlay">
+                            <button class="ddk-quick-view-btn">Quick View</button>
+                        </div>
+                    </a>
+                    <div class="ddk-product-actions">
+                        <button class="ddk-wishlist-btn" aria-label="Add to Wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="ddk-cart-btn" aria-label="Add to Cart">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                    <div class="ddk-badge-container">
+                        <span class="ddk-badge ddk-new-badge">NEW</span>
+                        <span class="ddk-badge ddk-discount-badge">-55%</span>
+                    </div>
+                </div>
+                <div class="ddk-product-info">
+                    <div class="ddk-product-category">T-Shirts</div>
+                    <h3 class="ddk-product-title">Designer Graphic Tee</h3>
+                    <div class="ddk-product-rating">
+                        <div class="ddk-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ddk-rating-count">(45)</span>
+                    </div>
+                    <div class="ddk-price">
+                        <span class="ddk-current-price">₹449</span>
+                        <span class="ddk-original-price">₹899</span>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- Best Sellers Content -->
+    <div class="ddk-tab-content" id="best-sellers">
+        <div class="ddk-product-grid">
+            <!-- Best Seller Product 1 -->
+            <div class="ddk-product-card" data-id="bs1">
+                <div class="ddk-product-image-container">
+                    <a href="#product-details" class="ddk-product-link">
+                        <img src="imagesss/hoody 1.jpg" alt="Premium Hoodie" class="ddk-product-image">
+                        <div class="ddk-product-overlay">
+                            <button class="ddk-quick-view-btn">Quick View</button>
+                        </div>
+                    </a>
+                    <div class="ddk-product-actions">
+                        <button class="ddk-wishlist-btn" aria-label="Add to Wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="ddk-cart-btn" aria-label="Add to Cart">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                    <div class="ddk-badge-container">
+                        <span class="ddk-badge ddk-bestseller-badge">BEST SELLER</span>
+                        <span class="ddk-badge ddk-discount-badge">-50%</span>
+                    </div>
+                </div>
+                <div class="ddk-product-info">
+                    <div class="ddk-product-category">Hoodies</div>
+                    <h3 class="ddk-product-title">Premium Hoodie</h3>
+                    <div class="ddk-product-rating">
+                        <div class="ddk-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ddk-rating-count">(128)</span>
+                    </div>
+                    <div class="ddk-price">
+                        <span class="ddk-current-price">₹1499</span>
+                        <span class="ddk-original-price">₹2999</span>
+                    </div>
+                </div>
+            </div>
+
+                        <!-- Best Seller Product 2 -->
+                        <div class="ddk-product-card" data-id="bs2">
+                            <div class="ddk-product-image-container">
+                                <a href="#product-details" class="ddk-product-link">
+                                    <img src="imagesss/tshirt 3.jpg" alt="Graphic Design T-Shirt" class="ddk-product-image">
+                                    <div class="ddk-product-overlay">
+                                        <button class="ddk-quick-view-btn">Quick View</button>
+                                    </div>
+                                </a>
+                                <div class="ddk-product-actions">
+                                    <button class="ddk-wishlist-btn" aria-label="Add to Wishlist">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                    <button class="ddk-cart-btn" aria-label="Add to Cart">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                                <div class="ddk-badge-container">
+                                    <span class="ddk-badge ddk-bestseller-badge">BEST SELLER</span>
+                                    <span class="ddk-badge ddk-discount-badge">-60%</span>
+                                </div>
+                            </div>
+                            <div class="ddk-product-info">
+                                <div class="ddk-product-category">T-Shirts</div>
+                                <h3 class="ddk-product-title">Graphic Design T-Shirt</h3>
+                                <div class="ddk-product-rating">
+                                    <div class="ddk-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span class="ddk-rating-count">(95)</span>
+                                </div>
+                                <div class="ddk-price">
+                                    <span class="ddk-current-price">₹699</span>
+                                    <span class="ddk-original-price">₹1399</span>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Best Seller Product 3 -->
+                        <div class="ddk-product-card" data-id="bs3">
+                            <div class="ddk-product-image-container">
+                                <a href="#product-details" class="ddk-product-link">
+                                    <img src="imagesss/cup 3.jpg" alt="Designer Coffee Cup" class="ddk-product-image">
+                                    <div class="ddk-product-overlay">
+                                        <button class="ddk-quick-view-btn">Quick View</button>
+                                    </div>
+                                </a>
+                                <div class="ddk-product-actions">
+                                    <button class="ddk-wishlist-btn" aria-label="Add to Wishlist">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                    <button class="ddk-cart-btn" aria-label="Add to Cart">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                                <div class="ddk-badge-container">
+                                    <span class="ddk-badge ddk-bestseller-badge">BEST SELLER</span>
+                                    <span class="ddk-badge ddk-discount-badge">-45%</span>
+                                </div>
+                            </div>
+                            <div class="ddk-product-info">
+                                <div class="ddk-product-category">Accessories</div>
+                                <h3 class="ddk-product-title">Designer Coffee Cup</h3>
+                                <div class="ddk-product-rating">
+                                    <div class="ddk-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="ddk-rating-count">(87)</span>
+                                </div>
+                                <div class="ddk-price">
+                                    <span class="ddk-current-price">₹449</span>
+                                    <span class="ddk-original-price">₹899</span>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Best Seller Product 4 -->
+                        <div class="ddk-product-card" data-id="bs4">
+                            <div class="ddk-product-image-container">
+                                <a href="#product-details" class="ddk-product-link">
+                                    <img src="imagesss/pad 3.jpg" alt="RGB Gaming Mousepad" class="ddk-product-image">
+                                    <div class="ddk-product-overlay">
+                                        <button class="ddk-quick-view-btn">Quick View</button>
+                                    </div>
+                                </a>
+                                <div class="ddk-product-actions">
+                                    <button class="ddk-wishlist-btn" aria-label="Add to Wishlist">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                    <button class="ddk-cart-btn" aria-label="Add to Cart">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                                <div class="ddk-badge-container">
+                                    <span class="ddk-badge ddk-bestseller-badge">BEST SELLER</span>
+                                    <span class="ddk-badge ddk-discount-badge">-55%</span>
+                                </div>
+                            </div>
+                            <div class="ddk-product-info">
+                                <div class="ddk-product-category">Gaming</div>
+                                <h3 class="ddk-product-title">RGB Gaming Mousepad</h3>
+                                <div class="ddk-product-rating">
+                                    <div class="ddk-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="ddk-rating-count">(156)</span>
+                                </div>
+                                <div class="ddk-price">
+                                    <span class="ddk-current-price">₹599</span>
+                                    <span class="ddk-original-price">₹1199</span>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Best Seller Product 5 -->
+                        <!-- <div class="ddk-product-card" data-id="bs5">
+                            <div class="ddk-product-image-container">
+                                <a href="#product-details" class="ddk-product-link">
+                                    <img src="imagesss/hoody 3.jpg" alt="Limited Edition Hoodie" class="ddk-product-image">
+                                    <div class="ddk-product-overlay">
+                                        <button class="ddk-quick-view-btn">Quick View</button>
+                                    </div>
+                                </a>
+                                <div class="ddk-product-actions">
+                                    <button class="ddk-wishlist-btn" aria-label="Add to Wishlist">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                    <button class="ddk-cart-btn" aria-label="Add to Cart">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                                <div class="ddk-badge-container">
+                                    <span class="ddk-badge ddk-bestseller-badge">BEST SELLER</span>
+                                    <span class="ddk-badge ddk-discount-badge">-50%</span>
+                                </div>
+                            </div>
+                            <div class="ddk-product-info">
+                                <div class="ddk-product-category">Hoodies</div>
+                                <h3 class="ddk-product-title">Limited Edition Hoodie</h3>
+                                <div class="ddk-product-rating">
+                                    <div class="ddk-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span class="ddk-rating-count">(142)</span>
+                                </div>
+                                <div class="ddk-price">
+                                    <span class="ddk-current-price">₹1299</span>
+                                    <span class="ddk-original-price">₹2599</span>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- Hot Under 300 Section -->
+<section class="dck-hot-deals-section">
+    <div class="dck-section-header">
+        <div class="dck-header-content">
+            <h2 class="dck-section-title">
+                <span class="dck-highlight">Hot Under</span> ₹300
+            </h2>
+            <p class="dck-section-subtitle">Exclusive deals that won't break the bank</p>
+        </div>
+        <button class="dck-view-all-btn">
+            View All 
+            <span class="dck-btn-icon">
+                <i class="fas fa-arrow-right"></i>
+            </span>
+        </button>
+    </div>
+
+    <div class="dck-hot-deals-grid">
+        <!-- Hot Deal Product 1 -->
+        <div class="dck-product-card" data-id="hd1">
+            <div class="dck-product-image-container">
+                <a href="#product-details" class="dck-product-link">
+                    <img src="imagesss/pad 1.jpg" alt="Ergonomic Mousepad" class="dck-product-image">
+                    <div class="dck-product-overlay">
+                        <div class="dck-countdown" data-end="2024-04-30">
+                            <span class="dck-time-block">
+                                <span class="dck-time">23</span>
+                                <span class="dck-label">Hours</span>
+                            </span>
+                            <span class="dck-time-block">
+                                <span class="dck-time">45</span>
+                                <span class="dck-label">Mins</span>
+                            </span>
+                        </div>
+                        <button class="dck-quick-view-btn">Quick View</button>
+                    </div>
+                </a>
+                <div class="dck-product-actions">
+                    <button class="dck-wishlist-btn" aria-label="Add to Wishlist">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <button class="dck-cart-btn" aria-label="Add to Cart">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </div>
+                <div class="dck-badge-container">
+                    <span class="dck-badge dck-hot-badge">HOT</span>
+                    <span class="dck-badge dck-discount-badge">-60%</span>
+                </div>
+                <div class="dck-stock-status">
+                    <div class="dck-progress-bar">
+                        <div class="dck-progress" style="width: 65%"></div>
+                    </div>
+                    <span class="dck-stock-text">Stock: 15 left</span>
+                </div>
+            </div>
+            <div class="dck-product-info">
+                <div class="dck-product-category">Gaming Accessories</div>
+                <h3 class="dck-product-title">Ergonomic Mousepad</h3>
+                <div class="dck-product-rating">
+                    <div class="dck-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="dck-rating-count">(42)</span>
+                </div>
+                <div class="dck-price">
+                    <span class="dck-current-price">₹299</span>
+                    <span class="dck-original-price">₹599</span>
+                    <span class="dck-discount-tag">60% OFF</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Continuing the Hot Deals Grid -->
+
+        <!-- Hot Deal Product 2 -->
+        <div class="dck-product-card" data-id="hd2">
+            <div class="dck-product-image-container">
+                <a href="#product-details" class="dck-product-link">
+                    <img src="imagesss/cup 1.jpg" alt="Designer Coffee Mug" class="dck-product-image">
+                    <div class="dck-product-overlay">
+                        <div class="dck-countdown" data-end="2024-04-29">
+                            <span class="dck-time-block">
+                                <span class="dck-time">18</span>
+                                <span class="dck-label">Hours</span>
+                            </span>
+                            <span class="dck-time-block">
+                                <span class="dck-time">32</span>
+                                <span class="dck-label">Mins</span>
+                            </span>
+                        </div>
+                        <button class="dck-quick-view-btn">Quick View</button>
+                    </div>
+                </a>
+                <div class="dck-product-actions">
+                    <button class="dck-wishlist-btn" aria-label="Add to Wishlist">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <button class="dck-cart-btn" aria-label="Add to Cart">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </div>
+                <div class="dck-badge-container">
+                    <span class="dck-badge dck-hot-badge">HOT</span>
+                    <span class="dck-badge dck-discount-badge">-55%</span>
+                </div>
+                <div class="dck-stock-status">
+                    <div class="dck-progress-bar">
+                        <div class="dck-progress" style="width: 45%"></div>
+                    </div>
+                    <span class="dck-stock-text">Stock: 8 left</span>
+                </div>
+            </div>
+            <div class="dck-product-info">
+                <div class="dck-product-category">Kitchen & Dining</div>
+                <h3 class="dck-product-title">Designer Coffee Mug</h3>
+                <div class="dck-product-rating">
+                    <div class="dck-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <span class="dck-rating-count">(36)</span>
+                </div>
+                <div class="dck-price">
+                    <span class="dck-current-price">₹249</span>
+                    <span class="dck-original-price">₹499</span>
+                    <span class="dck-discount-tag">55% OFF</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hot Deal Product 3 -->
+        <div class="dck-product-card" data-id="hd3">
+            <div class="dck-product-image-container">
+                <a href="#product-details" class="dck-product-link">
+                    <img src="imagesss/tshirt 4.jpg" alt="Graphic Print T-Shirt" class="dck-product-image">
+                    <div class="dck-product-overlay">
+                        <div class="dck-countdown" data-end="2024-04-28">
+                            <span class="dck-time-block">
+                                <span class="dck-time">21</span>
+                                <span class="dck-label">Hours</span>
+                            </span>
+                            <span class="dck-time-block">
+                                <span class="dck-time">15</span>
+                                <span class="dck-label">Mins</span>
+                            </span>
+                        </div>
+                        <button class="dck-quick-view-btn">Quick View</button>
+                    </div>
+                </a>
+                <div class="dck-product-actions">
+                    <button class="dck-wishlist-btn" aria-label="Add to Wishlist">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <button class="dck-cart-btn" aria-label="Add to Cart">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </div>
+                <div class="dck-badge-container">
+                    <span class="dck-badge dck-hot-badge">HOT</span>
+                    <span class="dck-badge dck-discount-badge">-70%</span>
+                </div>
+                <div class="dck-stock-status">
+                    <div class="dck-progress-bar">
+                        <div class="dck-progress" style="width: 25%"></div>
+                    </div>
+                    <span class="dck-stock-text">Stock: 5 left</span>
+                </div>
+            </div>
+            <div class="dck-product-info">
+                <div class="dck-product-category">Fashion</div>
+                <h3 class="dck-product-title">Graphic Print T-Shirt</h3>
+                <div class="dck-product-rating">
+                    <div class="dck-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="dck-rating-count">(52)</span>
+                </div>
+                <div class="dck-price">
+                    <span class="dck-current-price">₹299</span>
+                    <span class="dck-original-price">₹999</span>
+                    <span class="dck-discount-tag">70% OFF</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hot Deal Product 4 -->
+        <div class="dck-product-card" data-id="hd4">
+            <div class="dck-product-image-container">
+                <a href="#product-details" class="dck-product-link">
+                    <img src="imagesss/tshirt 3.jpg" alt="RGB Gaming Mousepad Mini" class="dck-product-image">
+                    <div class="dck-product-overlay">
+                        <div class="dck-countdown" data-end="2024-04-27">
+                            <span class="dck-time-block">
+                                <span class="dck-time">15</span>
+                                <span class="dck-label">Hours</span>
+                            </span>
+                            <span class="dck-time-block">
+                                <span class="dck-time">40</span>
+                                <span class="dck-label">Mins</span>
+                            </span>
+                        </div>
+                        <button class="dck-quick-view-btn">Quick View</button>
+                    </div>
+                </a>
+                <div class="dck-product-actions">
+                    <button class="dck-wishlist-btn" aria-label="Add to Wishlist">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <button class="dck-cart-btn" aria-label="Add to Cart">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </div>
+                <div class="dck-badge-container">
+                    <span class="dck-badge dck-hot-badge">HOT</span>
+                    <span class="dck-badge dck-discount-badge">-65%</span>
+                </div>
+                <div class="dck-stock-status">
+                    <div class="dck-progress-bar">
+                        <div class="dck-progress" style="width: 35%"></div>
+                    </div>
+                    <span class="dck-stock-text">Stock: 7 left</span>
+                </div>
+            </div>
+            <div class="dck-product-info">
+                <div class="dck-product-category">Gaming Accessories</div>
+                <h3 class="dck-product-title">RGB Gaming Mousepad Mini</h3>
+                <div class="dck-product-rating">
+                    <div class="dck-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="dck-rating-count">(48)</span>
+                </div>
+                <div class="dck-price">
+                    <span class="dck-current-price">₹279</span>
+                    <span class="dck-original-price">₹799</span>
+                    <span class="dck-discount-tag">65% OFF</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hot Deal Product 5 -->
+        <!-- <div class="dck-product-card" data-id="hd5">
+            <div class="dck-product-image-container">
+                <a href="#product-details" class="dck-product-link">
+                    <img src="imagesss/cup 4.jpg" alt="Travel Coffee Mug" class="dck-product-image">
+                    <div class="dck-product-overlay">
+                        <div class="dck-countdown" data-end="2024-04-26">
+                            <span class="dck-time-block">
+                                <span class="dck-time">12</span>
+                                <span class="dck-label">Hours</span>
+                            </span>
+                            <span class="dck-time-block">
+                                <span class="dck-time">55</span>
+                                <span class="dck-label">Mins</span>
+                            </span>
+                        </div>
+                        <button class="dck-quick-view-btn">Quick View</button>
+                    </div>
+                </a>
+                <div class="dck-product-actions">
+                    <button class="dck-wishlist-btn" aria-label="Add to Wishlist">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <button class="dck-cart-btn" aria-label="Add to Cart">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </div>
+                <div class="dck-badge-container">
+                    <span class="dck-badge dck-hot-badge">HOT</span>
+                    <span class="dck-badge dck-discount-badge">-50%</span>
+                </div>
+                <div class="dck-stock-status">
+                    <div class="dck-progress-bar">
+                        <div class="dck-progress" style="width: 15%"></div>
+                    </div>
+                    <span class="dck-stock-text">Stock: 3 left</span>
+                </div>
+            </div>
+            <div class="dck-product-info">
+                <div class="dck-product-category">Kitchen & Dining</div>
+                <h3 class="dck-product-title">Travel Coffee Mug</h3>
+                <div class="dck-product-rating">
+                    <div class="dck-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="dck-rating-count">(39)</span>
+                </div>
+                <div class="dck-price">
+                    <span class="dck-current-price">₹299</span>
+                    <span class="dck-original-price">₹599</span>
+                    <span class="dck-discount-tag">50% OFF</span>
+                </div>
+            </div>
+        </div> -->
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Custom Design Section -->
+<section class="custom-design-section" id="customDesign">
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="design-particle" data-depth="0.2"></div>
+        <div class="design-particle" data-depth="0.4"></div>
+        <div class="design-particle" data-depth="0.6"></div>
+    </div>
+
+    <div class="container mx-auto px-4 py-16">
+        <!-- Section Header -->
+        <div class="section-header text-center mb-12" data-aos="fade-up">
+            <span class="badge">Custom Design Studio</span>
+            <h2 class="title">Create Your Perfect Design</h2>
+            <p class="subtitle">Transform your ideas into custom apparel in three simple steps</p>
+        </div>
+
+        <!-- Design Process -->
+        <div class="design-process-wrapper">
+            <!-- Steps -->
+            <div class="process-steps" data-aos="fade-right">
+                <div class="step-card active" data-step="1">
+                    <div class="step-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <div class="step-content">
+                        <span class="step-number">01</span>
+                        <h3>Choose Product</h3>
+                        <p>Select from premium quality apparel</p>
+                    </div>
+                </div>
+
+                <div class="step-card" data-step="2">
+                    <div class="step-icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <div class="step-content">
+                        <span class="step-number">02</span>
+                        <h3>Customize Design</h3>
+                        <p>Use our intuitive design tools</p>
+                    </div>
+                </div>
+
+                <div class="step-card" data-step="3">
+                    <div class="step-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <div class="step-content">
+                        <span class="step-number">03</span>
+                        <h3>Quick Delivery</h3>
+                        <p>Get your custom creation fast</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Preview -->
+            <div class="design-preview" data-aos="fade-left">
+                <div class="preview-container">
+                    <div class="preview-screen">
+                        <div class="design-interface">
+                            <div class="upload-zone" id="uploadZone">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>Drag & drop your design here</p>
+                                <span>or</span>
+                                <button class="upload-btn">
+                                    Choose File
+                                    <input type="file" hidden accept="image/*">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="preview-base"></div>
+                </div>
+                <button class="start-design-btn">
+                    Start Designing Now
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <div class="design-features">
+            <div class="feature" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-palette"></i>
+                <span>Advanced Design Tools</span>
+            </div>
+            <div class="feature" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-shield-alt"></i>
+                <span>Quality Guaranteed</span>
+            </div>
+            <div class="feature" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-truck-fast"></i>
+                <span>Fast Turnaround</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer Section -->
+<footer class="main-footer" id="mainFooter">
+    <!-- Footer Pattern Overlay -->
+    <div class="footer-pattern">
+        <div class="pattern-overlay"></div>
+    </div>
+
+    <!-- Newsletter Bar -->
+    <div class="footer-newsletter" data-aos="fade-up">
+        <div class="newsletter-container">
+            <div class="newsletter-content">
+                <div class="newsletter-badge">
+                    <span class="highlight-badge">
+                        <i class="fas fa-gift"></i>
+                        Special Offer
+                    </span>
+                </div>
+                <h3>Join Our Newsletter & Get 10% Off</h3>
+                <p>Stay updated with latest trends, exclusive offers & fashion tips</p>
+                <div class="subscriber-count">
+                    <i class="fas fa-users"></i>
+                    <span id="subscriberCount">10,000+</span> Happy Subscribers
+                </div>
+            </div>
+
+            <form class="footer-subscribe-form" id="newsletterForm">
+                <div class="footer-input-group">
+                    <div class="input-wrapper">
+                        <i class="far fa-envelope input-icon"></i>
+                        <input 
+                            type="email" 
+                            id="newsletterEmail" 
+                            placeholder="Enter your email"
+                            required 
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                        >
+                        <div class="input-status">
+                            <i class="fas fa-check-circle success"></i>
+                            <i class="fas fa-times-circle error"></i>
+                        </div>
+                    </div>
+                    <button type="submit" class="subscribe-btn">
+                        <span class="btn-text">Subscribe Now</span>
+                        <i class="fas fa-paper-plane btn-icon"></i>
+                        <div class="btn-loader"></div>
+                    </button>
+                </div>
+                <div class="form-message"></div>
+                <div class="privacy-note">
+                    <i class="fas fa-lock"></i>
+                    We respect your privacy. Unsubscribe at any time.
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Footer Content -->
+    <div class="footer-main">
+        <div class="footer-container">
+            <!-- Company Info Column -->
+            <div class="footer-column company-info" data-aos="fade-up" data-aos-delay="100">
+                <div class="footer-logo">
+                    <img src="path/to/logo.png" alt="Company Logo" loading="lazy">
+                </div>
+                <p class="company-desc">
+                    Crafting premium custom apparel since 2010. We blend quality materials 
+                    with innovative design to create unique pieces that tell your story.
+                </p>
+                <div class="company-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">10K+</span>
+                        <span class="stat-label">Happy Customers</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15K+</span>
+                        <span class="stat-label">Products Delivered</span>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-btn" aria-label="Facebook" data-tooltip="Follow on Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-btn" aria-label="Instagram" data-tooltip="Follow on Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-btn" aria-label="Twitter" data-tooltip="Follow on Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-btn" aria-label="Pinterest" data-tooltip="Follow on Pinterest">
+                        <i class="fab fa-pinterest-p"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links Column -->
+            <div class="footer-column quick-links" data-aos="fade-up" data-aos-delay="200">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li>
+                        <a href="#home">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>About Us</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#products">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Products</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#custom">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Custom Design</span>
+                            <span class="link-badge">Hot</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#blog">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Blog</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Customer Service Column -->
+            <div class="footer-column customer-service" data-aos="fade-up" data-aos-delay="300">
+                <h4>Customer Service</h4>
+                <ul class="footer-links">
+                    <li>
+                        <a href="#track" class="service-link">
+                            <i class="fas fa-truck"></i>
+                            <div class="link-content">
+                                <span class="link-title">Track Order</span>
+                                <span class="link-desc">Check your order status</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#shipping" class="service-link">
+                            <i class="fas fa-box"></i>
+                            <div class="link-content">
+                                <span class="link-title">Shipping Policy</span>
+                                <span class="link-desc">Free shipping over ₹999</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#returns" class="service-link">
+                            <i class="fas fa-exchange-alt"></i>
+                            <div class="link-content">
+                                <span class="link-title">Returns & Exchange</span>
+                                <span class="link-desc">Easy 30 days return</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#help" class="service-link">
+                            <i class="fas fa-headset"></i>
+                            <div class="link-content">
+                                <span class="link-title">24/7 Support</span>
+                                <span class="link-desc">We're here to help</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contact Info Column -->
+            <div class="footer-column contact-info" data-aos="fade-up" data-aos-delay="400">
+                <h4>Get in Touch</h4>
+                <div class="contact-card">
+                    <div class="contact-header">
+                        <i class="fas fa-clock"></i>
+                        <span class="status-badge online">We're Online</span>
+                    </div>
+                    <ul class="contact-details">
+                        <li>
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <strong>Visit Us:</strong>
+                                <p>123 Fashion Street, Design District<br>Mumbai, Maharashtra 400001</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <strong>Call Us:</strong>
+                                <p>
+                                    <a href="tel:+919876543210">+91 98765 43210</a>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <strong>Email Us:</strong>
+                                <p>
+                                    <a href="mailto:support@yourstore.com">support@yourstore.com</a>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="contact-cta">
+                        <a href="#contact" class="contact-btn">
+                            <i class="fas fa-comments"></i>
+                            Start Live Chat
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <div class="bottom-container">
+            <div class="bottom-content">
+                <div class="copyright">
+                    <p>&copy; <span id="currentYear"></span> Your Store. All rights reserved</p>
+                </div>
+                <div class="payment-methods">
+                    <span class="payment-label">Secure Payments:</span>
+                    <div class="payment-icons">
+                        <img src="path/to/visa.png" alt="Visa" loading="lazy">
+                        <img src="path/to/mastercard.png" alt="Mastercard" loading="lazy">
+                        <img src="path/to/paypal.png" alt="PayPal" loading="lazy">
+                        <img src="path/to/upi.png" alt="UPI" loading="lazy">
+                    </div>
+                </div>
+                <div class="bottom-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <span class="separator">•</span>
+                    <a href="#terms">Terms & Conditions</a>
+                    <span class="separator">•</span>
+                    <a href="#sitemap">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+        <span class="tooltip">Back to Top</span>
+    </button>
+
+    <!-- Cookie Consent -->
+    <div class="cookie-consent" id="cookieConsent">
+        <div class="cookie-content">
+            <i class="fas fa-cookie-bite"></i>
+            <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+            <div class="cookie-buttons">
+                <button class="accept-cookies">Accept</button>
+                <button class="decline-cookies">Decline</button>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+</div>
+
+<!-- ... existing code ... -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ... existing main content ... -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    <script src="javascript/navbar.js"></script>
+    <script src="javascript/home.js"></script>
+    <script src="javascript/footer.js"></script>
+
+
+
+</script>
+</body>
+</html>

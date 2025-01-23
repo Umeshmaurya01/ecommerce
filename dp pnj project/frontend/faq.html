@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your modern e-commerce store with customizable products">
+    <meta name="keywords" content="e-commerce, custom design, t-shirts, fashion">
+    <title>Responsive Tailwind Navbar</title>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/faq.css">
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="favicon.png">
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+
+
+<!-- Required in the <head> section -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   
+ 
+        
+        <!-- Vanilla Tilt -->
+        <script src="https://unpkg.com/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
+  
+   
+</head>
+<body>
+
+    <!-- Top Search Bar Section -->
+    <div class="search-wrapper fixed w-full top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <div class="search-container relative">
+                <div class="flex items-center bg-white rounded-lg shadow-sm">
+                    <div class="flex-1 relative">
+                        <input type="text" 
+                               class="search-input w-full pl-12 pr-4 py-3 rounded-lg text-gray-700 focus:outline-none"
+                               placeholder="Search for products, brands and more...">
+                        <div class="absolute left-4 top-1/2 transform -translate-y-1/2">
+                            <i class="fas fa-search text-gray-400"></i>
+                        </div>
+                    </div>
+                    <div class="px-4 border-l border-gray-200">
+                        <select class="py-3 text-gray-600 focus:outline-none bg-transparent">
+                            <option>All Categories</option>
+                            <option>Men</option>
+                            <option>Women</option>
+                            <option>Accessories</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Search Suggestions -->
+                <div class="search-suggestions absolute w-full bg-white mt-2 rounded-lg shadow-lg z-45 hidden">
+                    <!-- Recent Searches -->
+                    <div class="p-4 border-b border-gray-100">
+                        <h3 class="text-sm font-semibold text-gray-600 mb-2">Recent Searches</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="search-tag px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-600 cursor-pointer">
+                                T-shirts
+                            </span>
+                            <span class="search-tag px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-600 cursor-pointer">
+                                Hoodies
+                            </span>
+                            <span class="search-tag px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-600 cursor-pointer">
+                                Jeans
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Trending Searches -->
+                    <div class="p-4">
+                        <h3 class="text-sm font-semibold text-gray-600 mb-2">Trending</h3>
+                        <div class="space-y-2">
+                            <div class="flex items-center space-x-3 p-2 hover:bg-gray-50 rounded cursor-pointer">
+                                <i class="fas fa-trending-up text-yellow-500"></i>
+                                <span class="text-gray-700">Summer Collection 2024</span>
+                            </div>
+                            <div class="flex items-center space-x-3 p-2 hover:bg-gray-50 rounded cursor-pointer">
+                                <i class="fas fa-trending-up text-yellow-500"></i>
+                                <span class="text-gray-700">Graphic T-shirts</span>
+                            </div>
+                            <div class="flex items-center space-x-3 p-2 hover:bg-gray-50 rounded cursor-pointer">
+                                <i class="fas fa-trending-up text-yellow-500"></i>
+                                <span class="text-gray-700">Custom Designs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Main Navigation -->
+<nav class="nav-wrapper sticky top-[73px] bg-white shadow-md z-30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+            <!-- Left Section -->
+            <div class="flex items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <h1 class="text-2xl font-bold text-gray-800 hover:text-yellow-400 transition-colors duration-300">
+                        BEWAKOOF
+                    </h1>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:ml-6 md:flex md:space-x-4">
+                    <a href="home.html" class="nav-link px-3 py-2 text-sm font-medium text-gray-700 hover:text-yellow-500">
+                        Home
+                    </a>
+
+                    <!-- Shop Dropdown -->
+                    <div class="nav-item relative group">
+                        <button href="shop.html" class="nav-link px-3 py-2 text-sm font-medium text-gray-700 hover:text-yellow-500 inline-flex items-center">
+                            Shop
+                            <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="nav-dropdown absolute left-0 w-56 bg-white rounded-md shadow-lg py-2 mt-2 z-35">
+                            <div class="grid grid-cols-2 gap-2">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Men's Fashion</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Women's Fashion</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Accessories</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">New Arrivals</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#" class="nav-link px-3 py-2 text-sm font-medium text-gray-700 hover:text-yellow-500">
+                        Customize Design
+                    </a>
+
+                    <div class="nav-item relative group">
+                        <button class="nav-link px-3 py-2 text-sm font-medium text-gray-700 hover:text-yellow-500 inline-flex items-center">
+                            Pages
+                            <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="nav-dropdown absolute left-0 w-56 bg-white rounded-md shadow-lg py-2 mt-2 z-35">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">About Us</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Contact</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">FAQ</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Privacy Policy</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Terms & Conditions</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Section -->
+            <div class="hidden md:flex items-center space-x-6">
+                <!-- Account Dropdown -->
+                <div class="nav-item relative group">
+                    <button class="nav-link text-gray-700 hover:text-yellow-500 flex items-center">
+                        <i class="far fa-user text-xl mr-2"></i>
+                        <span class="text-sm">Account</span>
+                    </button>
+                    <div class="nav-dropdown absolute right-0 w-48 bg-white rounded-md shadow-lg py-2 mt-2 z-35">
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Profile</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Orders</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Settings</a>
+                        <div class="border-t border-gray-100 my-1"></div>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Sign Out</a>
+                    </div>
+                </div>
+
+                <!-- Wishlist -->
+                <button class="nav-link text-gray-700 hover:text-yellow-500 relative">
+                    <i class="far fa-heart text-xl"></i>
+                    <span class="absolute -top-2 -right-2 bg-yellow-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">0</span>
+                </button>
+
+                <!-- Cart -->
+                <button class="nav-link text-gray-700 hover:text-yellow-500 relative">
+                    <i class="fas fa-shopping-cart text-xl"></i>
+                    <span class="absolute -top-2 -right-2 bg-yellow-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">0</span>
+                </button>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="flex items-center md:hidden">
+                <button id="mobile-menu-button" class="text-gray-700 hover:text-yellow-500 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="mobile-menu-alt fixed inset-0 invisible opacity-0 z-[60]">
+    <!-- Overlay Background -->
+    <div class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm transition-opacity"></div>
+    
+    <!-- Menu Content -->
+    <div class="menu-panel fixed right-0 top-0 bottom-0 w-[300px] bg-white transform translate-x-full transition-transform duration-300 ease-in-out">
+        <!-- Header -->
+        <div class="menu-header flex items-center justify-between p-4 border-b border-gray-100">
+            <h2 class="text-xl font-bold text-gray-800">Menu</h2>
+            <button id="mobile-menu-close" class="close-btn p-2 rounded-full hover:bg-gray-100 transition-colors">
+                <i class="fas fa-times text-xl text-gray-600"></i>
+            </button>
+        </div>
+
+        <!-- Menu Content Wrapper -->
+        <div class="menu-content h-[calc(100%-64px)] overflow-y-auto">
+            <!-- User Section -->
+            <div class="user-section p-4 bg-gray-50">
+                <div class="flex items-center space-x-3 mb-4">
+                    <div class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center">
+                        <i class="far fa-user text-yellow-600"></i>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-600">Welcome</p>
+                        <button class="text-yellow-600 font-medium hover:text-yellow-700">Sign In / Register</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="py-2">
+                <!-- Home -->
+                <a href="#" class="menu-item flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50">
+                    <i class="fas fa-home w-6"></i>
+                    <span>Home</span>
+                </a>
+
+                <!-- Shop Dropdown -->
+                <div class="menu-dropdown">
+                    <button class="menu-item w-full flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-gray-50">
+                        <div class="flex items-center">
+                            <i class="fas fa-shopping-bag w-6"></i>
+                            <span>Shop</span>
+                        </div>
+                        <i class="fas fa-chevron-down text-sm transition-transform"></i>
+                    </button>
+                    <div class="submenu hidden bg-gray-50">
+                        <a href="#" class="submenu-item block px-4 py-2 pl-12 text-gray-600 hover:bg-gray-100">
+                            Men's Fashion
+                        </a>
+                        <a href="#" class="submenu-item block px-4 py-2 pl-12 text-gray-600 hover:bg-gray-100">
+                            Women's Fashion
+                        </a>
+                        <a href="#" class="submenu-item block px-4 py-2 pl-12 text-gray-600 hover:bg-gray-100">
+                            Accessories
+                        </a>
+                        <a href="#" class="submenu-item block px-4 py-2 pl-12 text-gray-600 hover:bg-gray-100">
+                            New Arrivals
+                        </a>
+                    </div>
+
+
+                    <button class="menu-item w-full flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-gray-50">
+                        <div class="flex items-center">
+                            <i class="fas fa-file-alt w-6"></i>
+                            <span>Pages</span>
+                        </div>
+                        <i class="fas fa-chevron-down text-sm transition-transform"></i>
+                    </button>
+                    <div class="submenu hidden bg-gray-50">
+                        <a href="#" class="submenu-item block px-4 py-2 pl-12 text-gray-600 hover:bg-gray-100">About Us</a>
+                        <a href="#" class="submenu-item block px-4 py-2 pl-12 text-gray-600 hover:bg-gray-100">Contact</a>
+                        <a href="#" class="submenu-item block px-4 py-2 pl-12 text-gray-600 hover:bg-gray-100">FAQ</a>
+                        <a href="#" class="submenu-item block px-4 py-2 pl-12 text-gray-600 hover:bg-gray-100">Privacy Policy</a>
+                        <a href="#" class="submenu-item block px-4 py-2 pl-12 text-gray-600 hover:bg-gray-100">Terms & Conditions</a>
+                    </div>
+                </div>
+
+                
+
+                <!-- Other Links -->
+                <a href="#" class="menu-item flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50">
+                    <i class="fas fa-palette w-6"></i>
+                    <span>Customize Design</span>
+                </a>
+                <a href="#" class="menu-item flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50">
+                    <i class="fas fa-heart w-6"></i>
+                    <span>Wishlist</span>
+                </a>
+                <a href="#" class="menu-item flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50">
+                    <i class="fas fa-shopping-cart w-6"></i>
+                    <span>Cart</span>
+                </a>
+            </nav>
+
+            <!-- Bottom Section -->
+            <div class="border-t border-gray-100 p-4 mt-4">
+                <div class="grid grid-cols-2 gap-4">
+                    <a href="#" class="flex items-center text-gray-600 hover:text-yellow-600">
+                        <i class="fas fa-headset mr-2"></i>
+                        <span>Support</span>
+                    </a>
+                    <a href="#" class="flex items-center text-gray-600 hover:text-yellow-600">
+                        <i class="fas fa-cog mr-2"></i>
+                        <span>Settings</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- FAQ Banner Section -->
+<section class="faq-banner" data-aos="fade">
+    <!-- Background Elements -->
+    <div class="faq-banner-bg">
+        <div class="faq-banner-pattern"></div>
+        <div class="faq-banner-gradient"></div>
+        
+        <!-- Animated Shapes -->
+        <div class="faq-shapes">
+            <div class="faq-shape shape-1"></div>
+            <div class="faq-shape shape-2"></div>
+            <div class="faq-shape shape-3"></div>
+            <div class="faq-shape shape-4"></div>
+        </div>
+    </div>
+
+    <div class="faq-banner-container">
+        <!-- Left Content -->
+        <div class="faq-banner-content" data-aos="fade-right">
+            <div class="faq-badge-wrapper">
+                <span class="faq-badge">FAQ</span>
+                <span class="faq-badge-accent">Help Center</span>
+            </div>
+
+            <h1 class="faq-banner-title">
+                Got Questions?
+                <span class="faq-highlight">We've Got Answers!</span>
+            </h1>
+
+            <p class="faq-banner-description">
+                Explore everything you need to know about customizing your products. 
+                From design tips to shipping details, we're here to help.
+            </p>
+
+            <div class="faq-banner-stats">
+                <div class="faq-stat-item">
+                    <svg class="faq-stat-icon" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                    </svg>
+                    <div class="faq-stat-content">
+                        <span class="faq-stat-number">500+</span>
+                        <span class="faq-stat-label">Questions Answered</span>
+                    </div>
+                </div>
+                <div class="faq-stat-item">
+                    <svg class="faq-stat-icon" viewBox="0 0 24 24">
+                        <path d="M16.5 12c1.38 0 2.49-1.12 2.49-2.5S17.88 7 16.5 7C15.12 7 14 8.12 14 9.5s1.12 2.5 2.5 2.5zM9 11c1.66 0 2.99-1.34 2.99-3S10.66 5 9 5C7.34 5 6 6.34 6 8s1.34 3 3 3zm7.5 3c-1.83 0-5.5.92-5.5 2.75V19h11v-2.25c0-1.83-3.67-2.75-5.5-2.75zM9 13c-2.33 0-7 1.17-7 3.5V19h7v-2.25c0-.85.33-2.34 2.37-3.47C10.5 13.1 9.66 13 9 13z"/>
+                    </svg>
+                    <div class="faq-stat-content">
+                        <span class="faq-stat-number">24/7</span>
+                        <span class="faq-stat-label">Support Available</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-banner-cta">
+                <button class="faq-primary-btn">
+                    Browse FAQs
+                    <span class="faq-btn-icon">→</span>
+                </button>
+                <button class="faq-secondary-btn">
+                    Contact Support
+                </button>
+            </div>
+        </div>
+
+        <!-- Right Content - 3D Illustration -->
+        <div class="faq-banner-visual" data-aos="fade-left">
+            <div class="faq-visual-container">
+                <div class="faq-floating-elements">
+                    <!-- Question Marks -->
+                    <div class="faq-element question-mark question-mark-lg">?</div>
+                    <div class="faq-element question-mark question-mark-md">?</div>
+                    <div class="faq-element question-mark question-mark-sm">?</div>
+                    
+                    <!-- Stars -->
+                    <div class="faq-element star star-lg">★</div>
+                    <div class="faq-element star star-md">★</div>
+                    <div class="faq-element star star-sm">★</div>
+                </div>
+                <div class="faq-main-visual">
+                    <!-- Replace with your actual illustration/image -->
+                    <img src="imagesss/cup 3.jpg" 
+                         alt="FAQ Illustration" 
+                         class="faq-illustration"
+                         loading="eager">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Section 1: Introduction -->
+<section class="faq-intro" data-aos="fade-up">
+    <div class="intro-bg">
+        <div class="intro-pattern"></div>
+        <div class="intro-gradient"></div>
+    </div>
+
+    <div class="intro-container">
+        <div class="intro-badge" data-aos="fade-down">
+            <span class="badge-icon">✨</span>
+            FAQ Center
+        </div>
+
+        <h1 class="intro-title" data-aos="fade-up" data-aos-delay="100">
+            Your Questions, <span class="highlight">Answered!</span>
+        </h1>
+
+        <p class="intro-description" data-aos="fade-up" data-aos-delay="200">
+            Everything you need to know about our custom printing services. 
+            From design guidelines to shipping details, we've got you covered.
+        </p>
+
+        <div class="intro-stats" data-aos="fade-up" data-aos-delay="300">
+            <div class="stat-card">
+                <div class="stat-icon">🎨</div>
+                <span class="stat-number">10K+</span>
+                <span class="stat-label">Designs Created</span>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⭐</div>
+                <span class="stat-number">4.9/5</span>
+                <span class="stat-label">Customer Rating</span>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🚀</div>
+                <span class="stat-number">24/7</span>
+                <span class="stat-label">Support</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<!-- Section 2: Product FAQs -->
+<section class="faq-products" data-aos="fade-up">
+    <div class="products-container">
+        <h2 class="products-title" data-aos="fade-up">
+            Frequently Asked Questions
+            <span class="title-accent">About Our Products</span>
+        </h2>
+
+        <div class="faq-grid">
+            <!-- FAQ Item 1 - Design Upload -->
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="faq-question">
+                    <span class="question-icon">Q</span>
+                    <h3>Can I use my own design for printing?</h3>
+                    <button class="toggle-btn" aria-label="Toggle answer">
+                        <svg class="arrow-icon" viewBox="0 0 24 24">
+                            <path d="M7 10l5 5 5-5z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely! You can easily upload your custom designs during checkout. We accept various file formats including PNG, JPG, and SVG. Our design preview tool lets you see exactly how your creation will look before ordering.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 - Product Quality -->
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="150">
+                <div class="faq-question">
+                    <span class="question-icon">Q</span>
+                    <h3>What's the quality of your products?</h3>
+                    <button class="toggle-btn" aria-label="Toggle answer">
+                        <svg class="arrow-icon" viewBox="0 0 24 24">
+                            <path d="M7 10l5 5 5-5z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="faq-answer">
+                    <p>We use premium quality materials sourced from trusted suppliers. Our t-shirts are 100% cotton, pre-shrunk, and designed for durability. All prints are made using eco-friendly, fade-resistant inks that maintain their vibrancy even after multiple washes.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 - Sizing -->
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="faq-question">
+                    <span class="question-icon">Q</span>
+                    <h3>How do I choose the right size?</h3>
+                    <button class="toggle-btn" aria-label="Toggle answer">
+                        <svg class="arrow-icon" viewBox="0 0 24 24">
+                            <path d="M7 10l5 5 5-5z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="faq-answer">
+                    <p>Each product page includes a detailed size guide with measurements in both inches and centimeters. We recommend measuring a well-fitting garment you already own and comparing it to our size chart. If you're between sizes, we suggest going up a size for a more comfortable fit.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 - Shipping -->
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="250">
+                <div class="faq-question">
+                    <span class="question-icon">Q</span>
+                    <h3>What are your shipping times and costs?</h3>
+                    <button class="toggle-btn" aria-label="Toggle answer">
+                        <svg class="arrow-icon" viewBox="0 0 24 24">
+                            <path d="M7 10l5 5 5-5z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="faq-answer">
+                    <p>Standard shipping (5-7 business days) is free for orders over $50. Express shipping (2-3 business days) is available for an additional fee. International shipping times vary by location. All orders include tracking, and shipping costs are calculated at checkout based on your location and selected shipping method.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 5 - Returns -->
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="faq-question">
+                    <span class="question-icon">Q</span>
+                    <h3>What's your return policy?</h3>
+                    <button class="toggle-btn" aria-label="Toggle answer">
+                        <svg class="arrow-icon" viewBox="0 0 24 24">
+                            <path d="M7 10l5 5 5-5z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="faq-answer">
+                    <p>We offer a 30-day return policy for unworn, unwashed items in original packaging. Custom-designed products can be returned if there's a print quality issue or manufacturing defect. Contact our support team within 30 days of delivery to initiate a return. Return shipping is free for defective items.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 6 - Bulk Orders -->
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="350">
+                <div class="faq-question">
+                    <span class="question-icon">Q</span>
+                    <h3>Do you offer bulk order discounts?</h3>
+                    <button class="toggle-btn" aria-label="Toggle answer">
+                        <svg class="arrow-icon" viewBox="0 0 24 24">
+                            <path d="M7 10l5 5 5-5z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! We offer tiered discounts for bulk orders: 10% off for 20+ items, 15% off for 50+ items, and 20% off for 100+ items. Contact our bulk orders team for custom quotes on larger quantities or special requirements. We also provide dedicated support for corporate and event orders.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 7 - Design Services -->
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                <div class="faq-question">
+                    <span class="question-icon">Q</span>
+                    <h3>Can you help me design my product?</h3>
+                    <button class="toggle-btn" aria-label="Toggle answer">
+                        <svg class="arrow-icon" viewBox="0 0 24 24">
+                            <path d="M7 10l5 5 5-5z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely! Our design team offers professional design services starting at $29.99. We can help create custom artwork, modify existing designs, or provide design consultations. Our online design tool also includes hundreds of templates and clipart for DIY designing.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 8 - Product Care -->
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="450">
+                <div class="faq-question">
+                    <span class="question-icon">Q</span>
+                    <h3>How should I care for my custom products?</h3>
+                    <button class="toggle-btn" aria-label="Toggle answer">
+                        <svg class="arrow-icon" viewBox="0 0 24 24">
+                            <path d="M7 10l5 5 5-5z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="faq-answer">
+                    <p>For best results, wash your custom products inside-out in cold water and tumble dry on low heat. Avoid using bleach or harsh detergents. Each item comes with specific care instructions on the label. Following these guidelines will help maintain print quality and extend the life of your garment.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Section 3: Ordering Process -->
+<section class="ord-process-section bg-gradient-to-b from-gray-50 to-white py-12 sm:py-16 overflow-hidden" data-aos="fade-up">
+    <div class="ord-process-container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Compact Header -->
+        <div class="ord-process-header text-center mb-8 sm:mb-12">
+            <span class="ord-badge inline-block px-3 py-1 rounded-full bg-indigo-100 text-indigo-800 text-sm font-medium mb-2" 
+                  data-aos="fade-down" data-aos-delay="100">
+                4 Easy Steps
+            </span>
+            <h2 class="ord-title text-2xl sm:text-3xl font-bold" data-aos="fade-up" data-aos-delay="200">
+                How to Create Your Custom Product
+            </h2>
+        </div>
+
+        <!-- Steps Grid -->
+        <div class="ord-steps-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            <!-- Step 1 -->
+            <div class="ord-step-card group" data-aos="fade-up" data-aos-delay="100">
+                <div class="ord-card-inner bg-white rounded-lg p-5 shadow-sm hover:shadow-md transition-all duration-300 relative h-full">
+                    <div class="ord-step-number absolute top-3 right-3 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                        1
+                    </div>
+                    <div class="ord-step-content">
+                        <div class="ord-icon-wrapper mb-3 text-indigo-600">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/>
+                            </svg>
+                        </div>
+                        <h3 class="ord-step-title text-lg font-semibold mb-2">Choose Product</h3>
+                        <p class="ord-step-desc text-sm text-gray-600">Select from our premium collection of customizable items.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="ord-step-card group" data-aos="fade-up" data-aos-delay="200">
+                <div class="ord-card-inner bg-white rounded-lg p-5 shadow-sm hover:shadow-md transition-all duration-300 relative h-full">
+                    <div class="ord-step-number absolute top-3 right-3 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                        2
+                    </div>
+                    <div class="ord-step-content">
+                        <div class="ord-icon-wrapper mb-3 text-indigo-600">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/>
+                            </svg>
+                        </div>
+                        <h3 class="ord-step-title text-lg font-semibold mb-2">Upload Design</h3>
+                        <p class="ord-step-desc text-sm text-gray-600">Upload your artwork or create using our design tools.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="ord-step-card group" data-aos="fade-up" data-aos-delay="300">
+                <div class="ord-card-inner bg-white rounded-lg p-5 shadow-sm hover:shadow-md transition-all duration-300 relative h-full">
+                    <div class="ord-step-number absolute top-3 right-3 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                        3
+                    </div>
+                    <div class="ord-step-content">
+                        <div class="ord-icon-wrapper mb-3 text-indigo-600">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                            </svg>
+                        </div>
+                        <h3 class="ord-step-title text-lg font-semibold mb-2">Preview</h3>
+                        <p class="ord-step-desc text-sm text-gray-600">Review and adjust your design in real-time.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="ord-step-card group" data-aos="fade-up" data-aos-delay="400">
+                <div class="ord-card-inner bg-white rounded-lg p-5 shadow-sm hover:shadow-md transition-all duration-300 relative h-full">
+                    <div class="ord-step-number absolute top-3 right-3 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                        4
+                    </div>
+                    <div class="ord-step-content">
+                        <div class="ord-icon-wrapper mb-3 text-indigo-600">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="ord-step-title text-lg font-semibold mb-2">Order</h3>
+                        <p class="ord-step-desc text-sm text-gray-600">Complete your purchase securely.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compact CTA -->
+        <div class="ord-action-wrapper text-center mt-8" data-aos="fade-up" data-aos-delay="500">
+            <button class="ord-start-btn bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium px-6 py-2.5 rounded-full inline-flex items-center space-x-2 transition-all duration-300 transform hover:scale-105">
+                <span>Start Creating</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Section 5: Customization FAQs -->
+<section class="customization-section" data-aos="fade-up">
+    <div class="customization-bg">
+        <div class="customization-pattern"></div>
+        <div class="floating-elements">
+            <div class="float-item brush">🖌️</div>
+            <div class="float-item palette">🎨</div>
+            <div class="float-item star">⭐</div>
+        </div>
+    </div>
+
+    <div class="customization-container">
+        <h2 class="customization-title" data-aos="fade-up">
+            Get Creative with Customizations
+            <span class="customization-subtitle">Design Guidelines & Tips</span>
+        </h2>
+
+        <div class="customization-grid">
+            <!-- Design Guidelines Card -->
+            <div class="custom-card" data-aos="fade-right">
+                <div class="card-header">
+                    <span class="card-icon">📐</span>
+                    <h3>Design Guidelines</h3>
+                </div>
+                <ul class="guidelines-list">
+                    <li>
+                        <strong>File Formats:</strong>
+                        PNG, JPG, SVG (300 DPI minimum)
+                    </li>
+                    <li>
+                        <strong>Size Limits:</strong>
+                        Maximum 20MB per file
+                    </li>
+                    <li>
+                        <strong>Color Mode:</strong>
+                        RGB for digital, CMYK for print
+                    </li>
+                    <li>
+                        <strong>Safe Zone:</strong>
+                        Keep important elements 0.5" from edges
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Design Tips Card -->
+            <div class="custom-card" data-aos="fade-left">
+                <div class="card-header">
+                    <span class="card-icon">💡</span>
+                    <h3>Pro Design Tips</h3>
+                </div>
+                <ul class="tips-list">
+                    <li>Use high contrast for better visibility</li>
+                    <li>Consider fabric color in your design</li>
+                    <li>Test different placements before finalizing</li>
+                    <li>Keep text readable at all sizes</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<!-- Section 6: Contact Us -->
+<section class="contts-contact-section" data-aos="fade-up">
+    <div class="contts-contact-container">
+        <div class="contts-contact-content">
+            <h2 class="contts-contact-title" data-aos="fade-up">
+                Still Have Questions?
+                <span class="contts-contact-subtitle">We're Here to Help!</span>
+            </h2>
+
+            <div class="contts-contact-grid">
+                <!-- Contact Form -->
+                <div class="contts-contact-form-wrapper" data-aos="fade-right">
+                    <form class="contts-contact-form" id="conttsContactForm">
+                        <div class="contts-form-group">
+                            <label for="conttsName">Your Name</label>
+                            <input type="text" id="conttsName" required class="contts-form-input" placeholder="Enter your name">
+                            <span class="contts-focus-border"></span>
+                        </div>
+                        <div class="contts-form-group">
+                            <label for="conttsEmail">Email Address</label>
+                            <input type="email" id="conttsEmail" required class="contts-form-input" placeholder="Enter your email">
+                            <span class="contts-focus-border"></span>
+                        </div>
+                        <div class="contts-form-group">
+                            <label for="conttsMessage">Your Question</label>
+                            <textarea id="conttsMessage" rows="4" required class="contts-form-input" placeholder="How can we help you?"></textarea>
+                            <span class="contts-focus-border"></span>
+                        </div>
+                        <button type="submit" class="contts-submit-btn">
+                            <span class="contts-btn-text">Send Message</span>
+                            <span class="contts-btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contts-contact-info" data-aos="fade-left">
+                    <div class="contts-info-card">
+                        <div class="contts-info-item">
+                            <div class="contts-info-icon-wrapper">
+                                <span class="contts-info-icon">📞</span>
+                            </div>
+                            <h3>Call Us</h3>
+                            <p>1-800-CUSTOM-PRINT</p>
+                            <p>Monday - Friday, 9AM - 6PM EST</p>
+                        </div>
+                        <div class="contts-info-item">
+                            <div class="contts-info-icon-wrapper">
+                                <span class="contts-info-icon">💬</span>
+                            </div>
+                            <h3>Live Chat</h3>
+                            <p>Available 24/7</p>
+                            <button class="contts-chat-btn" onclick="startConttsChat()">Start Chat</button>
+                        </div>
+                        <div class="contts-info-item">
+                            <div class="contts-info-icon-wrapper">
+                                <span class="contts-info-icon">📧</span>
+                            </div>
+                            <h3>Email Us</h3>
+                            <p>support@customprint.com</p>
+                            <p>Response within 24 hours</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer Section -->
+<footer class="main-footer" id="mainFooter">
+    <!-- Footer Pattern Overlay -->
+    <div class="footer-pattern">
+        <div class="pattern-overlay"></div>
+    </div>
+
+    <!-- Newsletter Bar -->
+    <div class="footer-newsletter" data-aos="fade-up">
+        <div class="newsletter-container">
+            <div class="newsletter-content">
+                <div class="newsletter-badge">
+                    <span class="highlight-badge">
+                        <i class="fas fa-gift"></i>
+                        Special Offer
+                    </span>
+                </div>
+                <h3>Join Our Newsletter & Get 10% Off</h3>
+                <p>Stay updated with latest trends, exclusive offers & fashion tips</p>
+                <div class="subscriber-count">
+                    <i class="fas fa-users"></i>
+                    <span id="subscriberCount">10,000+</span> Happy Subscribers
+                </div>
+            </div>
+
+            <form class="footer-subscribe-form" id="newsletterForm">
+                <div class="footer-input-group">
+                    <div class="input-wrapper">
+                        <i class="far fa-envelope input-icon"></i>
+                        <input 
+                            type="email" 
+                            id="newsletterEmail" 
+                            placeholder="Enter your email"
+                            required 
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                        >
+                        <div class="input-status">
+                            <i class="fas fa-check-circle success"></i>
+                            <i class="fas fa-times-circle error"></i>
+                        </div>
+                    </div>
+                    <button type="submit" class="subscribe-btn">
+                        <span class="btn-text">Subscribe Now</span>
+                        <i class="fas fa-paper-plane btn-icon"></i>
+                        <div class="btn-loader"></div>
+                    </button>
+                </div>
+                <div class="form-message"></div>
+                <div class="privacy-note">
+                    <i class="fas fa-lock"></i>
+                    We respect your privacy. Unsubscribe at any time.
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Footer Content -->
+    <div class="footer-main">
+        <div class="footer-container">
+            <!-- Company Info Column -->
+            <div class="footer-column company-info" data-aos="fade-up" data-aos-delay="100">
+                <div class="footer-logo">
+                    <img src="path/to/logo.png" alt="Company Logo" loading="lazy">
+                </div>
+                <p class="company-desc">
+                    Crafting premium custom apparel since 2010. We blend quality materials 
+                    with innovative design to create unique pieces that tell your story.
+                </p>
+                <div class="company-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">10K+</span>
+                        <span class="stat-label">Happy Customers</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15K+</span>
+                        <span class="stat-label">Products Delivered</span>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-btn" aria-label="Facebook" data-tooltip="Follow on Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-btn" aria-label="Instagram" data-tooltip="Follow on Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-btn" aria-label="Twitter" data-tooltip="Follow on Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-btn" aria-label="Pinterest" data-tooltip="Follow on Pinterest">
+                        <i class="fab fa-pinterest-p"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links Column -->
+            <div class="footer-column quick-links" data-aos="fade-up" data-aos-delay="200">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li>
+                        <a href="#home">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>About Us</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#products">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Products</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#custom">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Custom Design</span>
+                            <span class="link-badge">Hot</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#blog">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Blog</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Customer Service Column -->
+            <div class="footer-column customer-service" data-aos="fade-up" data-aos-delay="300">
+                <h4>Customer Service</h4>
+                <ul class="footer-links">
+                    <li>
+                        <a href="#track" class="service-link">
+                            <i class="fas fa-truck"></i>
+                            <div class="link-content">
+                                <span class="link-title">Track Order</span>
+                                <span class="link-desc">Check your order status</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#shipping" class="service-link">
+                            <i class="fas fa-box"></i>
+                            <div class="link-content">
+                                <span class="link-title">Shipping Policy</span>
+                                <span class="link-desc">Free shipping over ₹999</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#returns" class="service-link">
+                            <i class="fas fa-exchange-alt"></i>
+                            <div class="link-content">
+                                <span class="link-title">Returns & Exchange</span>
+                                <span class="link-desc">Easy 30 days return</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#help" class="service-link">
+                            <i class="fas fa-headset"></i>
+                            <div class="link-content">
+                                <span class="link-title">24/7 Support</span>
+                                <span class="link-desc">We're here to help</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contact Info Column -->
+            <div class="footer-column contact-info" data-aos="fade-up" data-aos-delay="400">
+                <h4>Get in Touch</h4>
+                <div class="contact-card">
+                    <div class="contact-header">
+                        <i class="fas fa-clock"></i>
+                        <span class="status-badge online">We're Online</span>
+                    </div>
+                    <ul class="contact-details">
+                        <li>
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <strong>Visit Us:</strong>
+                                <p>123 Fashion Street, Design District<br>Mumbai, Maharashtra 400001</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <strong>Call Us:</strong>
+                                <p>
+                                    <a href="tel:+919876543210">+91 98765 43210</a>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <strong>Email Us:</strong>
+                                <p>
+                                    <a href="mailto:support@yourstore.com">support@yourstore.com</a>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="contact-cta">
+                        <a href="#contact" class="contact-btn">
+                            <i class="fas fa-comments"></i>
+                            Start Live Chat
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <div class="bottom-container">
+            <div class="bottom-content">
+                <div class="copyright">
+                    <p>&copy; <span id="currentYear"></span> Your Store. All rights reserved</p>
+                </div>
+                <div class="payment-methods">
+                    <span class="payment-label">Secure Payments:</span>
+                    <div class="payment-icons">
+                        <img src="path/to/visa.png" alt="Visa" loading="lazy">
+                        <img src="path/to/mastercard.png" alt="Mastercard" loading="lazy">
+                        <img src="path/to/paypal.png" alt="PayPal" loading="lazy">
+                        <img src="path/to/upi.png" alt="UPI" loading="lazy">
+                    </div>
+                </div>
+                <div class="bottom-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <span class="separator">•</span>
+                    <a href="#terms">Terms & Conditions</a>
+                    <span class="separator">•</span>
+                    <a href="#sitemap">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+        <span class="tooltip">Back to Top</span>
+    </button>
+
+    <!-- Cookie Consent -->
+    <div class="cookie-consent" id="cookieConsent">
+        <div class="cookie-content">
+            <i class="fas fa-cookie-bite"></i>
+            <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+            <div class="cookie-buttons">
+                <button class="accept-cookies">Accept</button>
+                <button class="decline-cookies">Decline</button>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+    <script src="javascript/navbar.js"></script>
+    <script src="javascript/footer.js"></script>
+    <script src="javascript/faq.js"></script>
+
+</body>
+</html>

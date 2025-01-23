@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your modern e-commerce store with customizable products">
+    <meta name="keywords" content="e-commerce, custom design, t-shirts, fashion">
+    <title>Responsive Tailwind Navbar</title>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/privacy.css">
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="favicon.png">
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+
+
+<!-- Required in the <head> section -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   
+ <!-- -->
+        
+        <!-- Vanilla Tilt -->
+        <script src="https://unpkg.com/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
+  
+   
+</head>
+<body>
+
+     <!-- Top Search Bar Section -->
+     <div class="search-wrapper fixed w-full top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <div class="search-container relative">
+                <div class="flex items-center bg-white rounded-lg shadow-sm">
+                    <div class="flex-1 relative">
+                        <input type="text" 
+                               class="search-input w-full pl-12 pr-4 py-3 rounded-lg text-gray-700 focus:outline-none"
+                               placeholder="Search for products, brands and more...">
+                        <div class="absolute left-4 top-1/2 transform -translate-y-1/2">
+                            <i class="fas fa-search text-gray-400"></i>
+                        </div>
+                    </div>
+                    <div class="px-4 border-l border-gray-200">
+                        <select class="py-3 text-gray-600 focus:outline-none bg-transparent">
+                            <option>All Categories</option>
+                            <option>Men</option>
+                            <option>Women</option>
+                            <option>Accessories</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Search Suggestions -->
+                <div class="search-suggestions absolute w-full bg-white mt-2 rounded-lg shadow-lg z-45 hidden">
+                    <!-- Recent Searches -->
+                    <div class="p-4 border-b border-gray-100">
+                        <h3 class="text-sm font-semibold text-gray-600 mb-2">Recent Searches</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="search-tag px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-600 cursor-pointer">
+                                T-shirts
+                            </span>
+                            <span class="search-tag px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-600 cursor-pointer">
+                                Hoodies
+                            </span>
+                            <span class="search-tag px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-600 cursor-pointer">
+                                Jeans
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Trending Searches -->
+                    <div class="p-4">
+                        <h3 class="text-sm font-semibold text-gray-600 mb-2">Trending</h3>
+                        <div class="space-y-2">
+                            <div class="flex items-center space-x-3 p-2 hover:bg-gray-50 rounded cursor-pointer">
+                                <i class="fas fa-trending-up text-yellow-500"></i>
+                                <span class="text-gray-700">Summer Collection 2024</span>
+                            </div>
+                            <div class="flex items-center space-x-3 p-2 hover:bg-gray-50 rounded cursor-pointer">
+                                <i class="fas fa-trending-up text-yellow-500"></i>
+                                <span class="text-gray-700">Graphic T-shirts</span>
+                            </div>
+                            <div class="flex items-center space-x-3 p-2 hover:bg-gray-50 rounded cursor-pointer">
+                                <i class="fas fa-trending-up text-yellow-500"></i>
+                                <span class="text-gray-700">Custom Designs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Main Navigation -->
+<nav class="nav-wrapper sticky top-[73px] bg-white shadow-md z-30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+            <!-- Left Section -->
+            <div class="flex items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <h1 class="text-2xl font-bold text-gray-800 hover:text-yellow-400 transition-colors duration-300">
+                        BEWAKOOF
+                    </h1>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:ml-6 md:flex md:space-x-4">
+                    <a href="home.html" class="nav-link px-3 py-2 text-sm font-medium text-gray-700 hover:text-yellow-500">
+                        Home
+                    </a>
+
+                    <!-- Shop Dropdown -->
+                    <div class="nav-item relative group">
+                        <button href="shop.html" class="nav-link px-3 py-2 text-sm font-medium text-gray-700 hover:text-yellow-500 inline-flex items-center">
+                            Shop
+                            <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="nav-dropdown absolute left-0 w-56 bg-white rounded-md shadow-lg py-2 mt-2 z-35">
+                            <div class="grid grid-cols-2 gap-2">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Men's Fashion</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Women's Fashion</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Accessories</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">New Arrivals</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#" class="nav-link px-3 py-2 text-sm font-medium text-gray-700 hover:text-yellow-500">
+                        Customize Design
+                    </a>
+
+                    <div class="nav-item relative group">
+                        <button class="nav-link px-3 py-2 text-sm font-medium text-gray-700 hover:text-yellow-500 inline-flex items-center">
+                            Pages
+                            <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="nav-dropdown absolute left-0 w-56 bg-white rounded-md shadow-lg py-2 mt-2 z-35">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">About Us</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Contact</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">FAQ</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Privacy Policy</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Terms & Conditions</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Section -->
+            <div class="hidden md:flex items-center space-x-6">
+                <!-- Account Dropdown -->
+                <div class="nav-item relative group">
+                    <button class="nav-link text-gray-700 hover:text-yellow-500 flex items-center">
+                        <i class="far fa-user text-xl mr-2"></i>
+                        <span class="text-sm">Account</span>
+                    </button>
+                    <div class="nav-dropdown absolute right-0 w-48 bg-white rounded-md shadow-lg py-2 mt-2 z-35">
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Profile</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Orders</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Settings</a>
+                        <div class="border-t border-gray-100 my-1"></div>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Sign Out</a>
+                    </div>
+                </div>
+
+                <!-- Wishlist -->
+                <button class="nav-link text-gray-700 hover:text-yellow-500 relative">
+                    <i class="far fa-heart text-xl"></i>
+                    <span class="absolute -top-2 -right-2 bg-yellow-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">0</span>
+                </button>
+
+                <!-- Cart -->
+                <button class="nav-link text-gray-700 hover:text-yellow-500 relative">
+                    <i class="fas fa-shopping-cart text-xl"></i>
+                    <span class="absolute -top-2 -right-2 bg-yellow-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">0</span>
+                </button>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="flex items-center md:hidden">
+                <button id="mobile-menu-button" class="text-gray-700 hover:text-yellow-500 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="mobile-menu-alt fixed inset-0 invisible opacity-0 z-[60]">
+    <!-- Overlay Background -->
+    <div class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm transition-opacity"></div>
+    
+    <!-- Menu Content -->
+    <div class="menu-panel fixed right-0 top-0 bottom-0 w-[300px] bg-white transform translate-x-full transition-transform duration-300 ease-in-out">
+        <!-- Header -->
+        <div class="menu-header flex items-center justify-between p-4 border-b border-gray-100">
+            <h2 class="text-xl font-bold text-gray-800">Menu</h2>
+            <button id="mobile-menu-close" class="close-btn p-2 rounded-full hover:bg-gray-100 transition-colors">
+                <i class="fas fa-times text-xl text-gray-600"></i>
+            </button>
+        </div>
+
+        <!-- Menu Content Wrapper -->
+        <div class="menu-content h-[calc(100%-64px)] overflow-y-auto">
+            <!-- User Section -->
+            <div class="user-section p-4 bg-gray-50">
+                <div class="flex items-center space-x-3 mb-4">
+                    <div class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center">
+                        <i class="far fa-user text-yellow-600"></i>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-600">Welcome</p>
+                        <button class="text-yellow-600 font-medium hover:text-yellow-700">Sign In / Register</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="py-2">
+                <!-- Home -->
+                <a href="#" class="menu-item flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50">
+                    <i class="fas fa-home w-6"></i>
+                    <span>Home</span>
+                </a>
+
+                <!-- Shop Dropdown -->
+                <div class="menu-dropdown">
+                    <button class="menu-item w-full flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-gray-50">
+                        <div class="flex items-center">
+                            <i class="fas fa-shopping-bag w-6"></i>
+                            <span>Shop</span>
+                        </div>
+                        <i class="fas fa-chevron-down text-sm transition-transform"></i>
+                    </button>
+                    <div class="submenu hidden bg-gray-50">
+                        <a href="#" class="submenu-item block px-4 py-2 pl-12 text-gray-600 hover:bg-gray-100">
+                            Men's Fashion
+                        </a>
+                        <a href="#" class="submenu-item block px-4 py-2 pl-12 text-gray-600 hover:bg-gray-100">
+                            Women's Fashion
+                        </a>
+                        <a href="#" class="submenu-item block px-4 py-2 pl-12 text-gray-600 hover:bg-gray-100">
+                            Accessories
+                        </a>
+                        <a href="#" class="submenu-item block px-4 py-2 pl-12 text-gray-600 hover:bg-gray-100">
+                            New Arrivals
+                        </a>
+                    </div>
+
+
+                    <button class="menu-item w-full flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-gray-50">
+                        <div class="flex items-center">
+                            <i class="fas fa-file-alt w-6"></i>
+                            <span>Pages</span>
+                        </div>
+                        <i class="fas fa-chevron-down text-sm transition-transform"></i>
+                    </button>
+                    <div class="submenu hidden bg-gray-50">
+                        <a href="#" class="submenu-item block px-4 py-2 pl-12 text-gray-600 hover:bg-gray-100">About Us</a>
+                        <a href="#" class="submenu-item block px-4 py-2 pl-12 text-gray-600 hover:bg-gray-100">Contact</a>
+                        <a href="#" class="submenu-item block px-4 py-2 pl-12 text-gray-600 hover:bg-gray-100">FAQ</a>
+                        <a href="#" class="submenu-item block px-4 py-2 pl-12 text-gray-600 hover:bg-gray-100">Privacy Policy</a>
+                        <a href="#" class="submenu-item block px-4 py-2 pl-12 text-gray-600 hover:bg-gray-100">Terms & Conditions</a>
+                    </div>
+                </div>
+
+                
+
+                <!-- Other Links -->
+                <a href="#" class="menu-item flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50">
+                    <i class="fas fa-palette w-6"></i>
+                    <span>Customize Design</span>
+                </a>
+                <a href="#" class="menu-item flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50">
+                    <i class="fas fa-heart w-6"></i>
+                    <span>Wishlist</span>
+                </a>
+                <a href="#" class="menu-item flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50">
+                    <i class="fas fa-shopping-cart w-6"></i>
+                    <span>Cart</span>
+                </a>
+            </nav>
+
+            <!-- Bottom Section -->
+            <div class="border-t border-gray-100 p-4 mt-4">
+                <div class="grid grid-cols-2 gap-4">
+                    <a href="#" class="flex items-center text-gray-600 hover:text-yellow-600">
+                        <i class="fas fa-headset mr-2"></i>
+                        <span>Support</span>
+                    </a>
+                    <a href="#" class="flex items-center text-gray-600 hover:text-yellow-600">
+                        <i class="fas fa-cog mr-2"></i>
+                        <span>Settings</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="priv-legal-container">
+        <!-- Privacy Policy Header -->
+        <header class="priv-legal-header priv-privacy-header">
+            <div class="priv-header-content">
+                <h1 class="priv-main-title">Privacy Policy</h1>
+                <p class="priv-header-description">Last updated: [Date]</p>
+            </div>
+        </header>
+    
+        <!-- Quick Navigation -->
+        <nav class="priv-quick-nav" id="priv-privacy-nav">
+            <div class="priv-nav-container">
+                <h2>Quick Links</h2>
+                <ul class="priv-nav-links">
+                    <li><a href="#priv-privacy-intro">Introduction</a></li>
+                    <li><a href="#priv-information-collect">Information We Collect</a></li>
+                    <li><a href="#priv-information-use">How We Use Information</a></li>
+                    <li><a href="#priv-user-content">User Content</a></li>
+                    <li><a href="#priv-data-protection">Data Protection</a></li>
+                    <li><a href="#priv-user-rights">Your Rights</a></li>
+                </ul>
+            </div>
+        </nav>
+    
+        <!-- Main Content -->
+        <main class="priv-legal-content">
+            <!-- Introduction Section -->
+            <section id="priv-privacy-intro" class="priv-content-section" data-aos="fade-up">
+                <div class="priv-section-container">
+                    <h2 class="priv-section-title">Privacy Policy Introduction</h2>
+                    <div class="priv-section-content">
+                        <p class="priv-highlight-text">At [Your Store Name], we prioritize the protection of your privacy and personal information.</p>
+                        <p>This comprehensive Privacy Policy outlines our commitment to safeguarding your data and explains:</p>
+                        <ul class="priv-feature-list">
+                            <li>How we collect and use your information</li>
+                            <li>The security measures we implement</li>
+                            <li>Your rights regarding your personal data</li>
+                            <li>Our commitment to transparency</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Information Collection Section -->
+            <section id="priv-information-collect" class="priv-content-section" data-aos="fade-up">
+                <div class="priv-section-container">
+                    <h2 class="priv-section-title">Information We Collect</h2>
+                    <div class="priv-section-content">
+                        <div class="priv-info-grid">
+                            <div class="priv-info-card">
+                                <div class="priv-card-icon">
+                                    <i class="fas fa-user-circle"></i>
+                                </div>
+                                <h3>Personal Information</h3>
+                                <ul>
+                                    <li>Name and contact details</li>
+                                    <li>Shipping addresses</li>
+                                    <li>Email addresses</li>
+                                    <li>Phone numbers</li>
+                                </ul>
+                            </div>
+    
+                            <div class="priv-info-card">
+                                <div class="priv-card-icon">
+                                    <i class="fas fa-credit-card"></i>
+                                </div>
+                                <h3>Payment Data</h3>
+                                <ul>
+                                    <li>Payment card details</li>
+                                    <li>Transaction history</li>
+                                    <li>Billing information</li>
+                                </ul>
+                            </div>
+    
+                            <div class="priv-info-card">
+                                <div class="priv-card-icon">
+                                    <i class="fas fa-upload"></i>
+                                </div>
+                                <h3>User Content</h3>
+                                <ul>
+                                    <li>Custom designs</li>
+                                    <li>Uploaded logos</li>
+                                    <li>Product preferences</li>
+                                </ul>
+                            </div>
+    
+                            <div class="priv-info-card">
+                                <div class="priv-card-icon">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                                <h3>Technical Data</h3>
+                                <ul>
+                                    <li>IP addresses</li>
+                                    <li>Browser information</li>
+                                    <li>Device details</li>
+                                    <li>Cookies data</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Information Usage Section -->
+            <section id="priv-information-use" class="priv-content-section" data-aos="fade-up">
+                <div class="priv-section-container">
+                    <h2 class="priv-section-title">How We Use Your Information</h2>
+                    <div class="priv-section-content">
+                        <div class="priv-usage-timeline">
+                            <div class="priv-timeline-item">
+                                <div class="priv-timeline-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                                <div class="priv-timeline-content">
+                                    <h3>Order Processing</h3>
+                                    <p>Fulfilling your orders and managing your purchases</p>
+                                </div>
+                            </div>
+    
+                            <div class="priv-timeline-item">
+                                <div class="priv-timeline-icon">
+                                    <i class="fas fa-paint-brush"></i>
+                                </div>
+                                <div class="priv-timeline-content">
+                                    <h3>Customization</h3>
+                                    <p>Creating your custom designs and products</p>
+                                </div>
+                            </div>
+    
+                            <div class="priv-timeline-item">
+                                <div class="priv-timeline-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="priv-timeline-content">
+                                    <h3>Website Improvement</h3>
+                                    <p>Enhancing our services and user experience</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+                    <!-- Data Protection Section -->
+        <section id="priv-data-protection" class="priv-content-section" data-aos="fade-up">
+            <div class="priv-section-container">
+                <h2 class="priv-section-title">Data Protection & Security</h2>
+                <div class="priv-section-content">
+                    <div class="priv-security-features">
+                        <div class="priv-security-card">
+                            <div class="priv-security-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>Encryption</h3>
+                            <p>All sensitive data is encrypted using industry-standard SSL/TLS protocols</p>
+                        </div>
+
+                        <div class="priv-security-card">
+                            <div class="priv-security-icon">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <h3>Secure Storage</h3>
+                            <p>Your data is stored in secure, encrypted databases with restricted access</p>
+                        </div>
+
+                        <div class="priv-security-card">
+                            <div class="priv-security-icon">
+                                <i class="fas fa-user-shield"></i>
+                            </div>
+                            <h3>Access Control</h3>
+                            <p>Strict access controls and authentication measures are in place</p>
+                        </div>
+
+                        <div class="priv-security-card">
+                            <div class="priv-security-icon">
+                                <i class="fas fa-sync-alt"></i>
+                            </div>
+                            <h3>Regular Updates</h3>
+                            <p>Continuous security updates and vulnerability assessments</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- User Rights Section -->
+        <section id="priv-user-rights" class="priv-content-section" data-aos="fade-up">
+            <div class="priv-section-container">
+                <h2 class="priv-section-title">Your Rights</h2>
+                <div class="priv-section-content">
+                    <div class="priv-rights-accordion">
+                        <div class="priv-accordion-item">
+                            <button class="priv-accordion-trigger">
+                                <span>Right to Access</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="priv-accordion-content">
+                                <p>You can request access to all personal data we hold about you</p>
+                            </div>
+                        </div>
+
+                        <div class="priv-accordion-item">
+                            <button class="priv-accordion-trigger">
+                                <span>Right to Rectification</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="priv-accordion-content">
+                                <p>You can request corrections to your personal data</p>
+                            </div>
+                        </div>
+
+                        <div class="priv-accordion-item">
+                            <button class="priv-accordion-trigger">
+                                <span>Right to Erasure</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="priv-accordion-content">
+                                <p>You can request deletion of your personal data</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+
+<!-- Terms and Conditions Section -->
+<div class="priv-legal-container priv-terms-section">
+    <header class="priv-legal-header priv-terms-header">
+        <div class="priv-header-content">
+            <h1 class="priv-main-title">Terms and Conditions</h1>
+            <p class="priv-header-description">Last updated: [Date]</p>
+        </div>
+    </header>
+
+    <!-- Terms Quick Navigation -->
+    <nav class="priv-quick-nav" id="priv-terms-nav">
+        <div class="priv-nav-container">
+            <h2>Quick Links</h2>
+            <ul class="priv-nav-links">
+                <li><a href="#priv-terms-intro">Introduction</a></li>
+                <li><a href="#priv-website-use">Website Use</a></li>
+                <li><a href="#priv-product-terms">Product Terms</a></li>
+                <li><a href="#priv-shipping-terms">Shipping</a></li>
+                <li><a href="#priv-intellectual-property">IP Rights</a></li>
+                <li><a href="#priv-liability">Liability</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Terms Content -->
+    <main class="priv-legal-content">
+        <!-- Terms Introduction -->
+        <section id="priv-terms-intro" class="priv-content-section" data-aos="fade-up">
+            <div class="priv-section-container">
+                <h2 class="priv-section-title">Terms of Service</h2>
+                <div class="priv-section-content">
+                    <div class="priv-terms-card">
+                        <div class="priv-terms-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <p class="priv-highlight-text">By accessing and using [Your Store Name], you agree to these terms and conditions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Website Use Section -->
+        <section id="priv-website-use" class="priv-content-section" data-aos="fade-up">
+            <div class="priv-section-container">
+                <h2 class="priv-section-title">Website Use</h2>
+                <div class="priv-section-content">
+                    <div class="priv-rules-grid">
+                        <div class="priv-rule-card">
+                            <div class="priv-rule-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <h3>Acceptable Use</h3>
+                            <ul class="priv-rule-list">
+                                <li>Legal and appropriate content only</li>
+                                <li>Respect intellectual property rights</li>
+                                <li>No harmful or malicious activities</li>
+                            </ul>
+                        </div>
+
+                        <div class="priv-rule-card">
+                            <div class="priv-rule-icon">
+                                <i class="fas fa-times-circle"></i>
+                            </div>
+                            <h3>Prohibited Activities</h3>
+                            <ul class="priv-rule-list">
+                                <li>No unauthorized access attempts</li>
+                                <li>No distribution of malware</li>
+                                <li>No interference with service</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="priv-faq-section" data-aos="fade-up">
+            <div class="priv-section-container">
+                <h2 class="priv-section-title">Frequently Asked Questions</h2>
+                <div class="priv-faq-grid">
+                    <div class="priv-faq-item">
+                        <button class="priv-faq-question">
+                            <span>How is my personal data protected?</span>
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <div class="priv-faq-answer">
+                            <p>We use industry-standard encryption and security measures to protect your data...</p>
+                        </div>
+                    </div>
+                    <!-- More FAQ items... -->
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+    
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer Section -->
+<footer class="main-footer" id="mainFooter">
+    <!-- Footer Pattern Overlay -->
+    <div class="footer-pattern">
+        <div class="pattern-overlay"></div>
+    </div>
+
+    <!-- Newsletter Bar -->
+    <div class="footer-newsletter" data-aos="fade-up">
+        <div class="newsletter-container">
+            <div class="newsletter-content">
+                <div class="newsletter-badge">
+                    <span class="highlight-badge">
+                        <i class="fas fa-gift"></i>
+                        Special Offer
+                    </span>
+                </div>
+                <h3>Join Our Newsletter & Get 10% Off</h3>
+                <p>Stay updated with latest trends, exclusive offers & fashion tips</p>
+                <div class="subscriber-count">
+                    <i class="fas fa-users"></i>
+                    <span id="subscriberCount">10,000+</span> Happy Subscribers
+                </div>
+            </div>
+
+            <form class="footer-subscribe-form" id="newsletterForm">
+                <div class="footer-input-group">
+                    <div class="input-wrapper">
+                        <i class="far fa-envelope input-icon"></i>
+                        <input 
+                            type="email" 
+                            id="newsletterEmail" 
+                            placeholder="Enter your email"
+                            required 
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                        >
+                        <div class="input-status">
+                            <i class="fas fa-check-circle success"></i>
+                            <i class="fas fa-times-circle error"></i>
+                        </div>
+                    </div>
+                    <button type="submit" class="subscribe-btn">
+                        <span class="btn-text">Subscribe Now</span>
+                        <i class="fas fa-paper-plane btn-icon"></i>
+                        <div class="btn-loader"></div>
+                    </button>
+                </div>
+                <div class="form-message"></div>
+                <div class="privacy-note">
+                    <i class="fas fa-lock"></i>
+                    We respect your privacy. Unsubscribe at any time.
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Footer Content -->
+    <div class="footer-main">
+        <div class="footer-container">
+            <!-- Company Info Column -->
+            <div class="footer-column company-info" data-aos="fade-up" data-aos-delay="100">
+                <div class="footer-logo">
+                    <img src="path/to/logo.png" alt="Company Logo" loading="lazy">
+                </div>
+                <p class="company-desc">
+                    Crafting premium custom apparel since 2010. We blend quality materials 
+                    with innovative design to create unique pieces that tell your story.
+                </p>
+                <div class="company-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">10K+</span>
+                        <span class="stat-label">Happy Customers</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15K+</span>
+                        <span class="stat-label">Products Delivered</span>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-btn" aria-label="Facebook" data-tooltip="Follow on Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-btn" aria-label="Instagram" data-tooltip="Follow on Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-btn" aria-label="Twitter" data-tooltip="Follow on Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-btn" aria-label="Pinterest" data-tooltip="Follow on Pinterest">
+                        <i class="fab fa-pinterest-p"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links Column -->
+            <div class="footer-column quick-links" data-aos="fade-up" data-aos-delay="200">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li>
+                        <a href="#home">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>About Us</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#products">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Products</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#custom">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Custom Design</span>
+                            <span class="link-badge">Hot</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#blog">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Blog</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Customer Service Column -->
+            <div class="footer-column customer-service" data-aos="fade-up" data-aos-delay="300">
+                <h4>Customer Service</h4>
+                <ul class="footer-links">
+                    <li>
+                        <a href="#track" class="service-link">
+                            <i class="fas fa-truck"></i>
+                            <div class="link-content">
+                                <span class="link-title">Track Order</span>
+                                <span class="link-desc">Check your order status</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#shipping" class="service-link">
+                            <i class="fas fa-box"></i>
+                            <div class="link-content">
+                                <span class="link-title">Shipping Policy</span>
+                                <span class="link-desc">Free shipping over ₹999</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#returns" class="service-link">
+                            <i class="fas fa-exchange-alt"></i>
+                            <div class="link-content">
+                                <span class="link-title">Returns & Exchange</span>
+                                <span class="link-desc">Easy 30 days return</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#help" class="service-link">
+                            <i class="fas fa-headset"></i>
+                            <div class="link-content">
+                                <span class="link-title">24/7 Support</span>
+                                <span class="link-desc">We're here to help</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contact Info Column -->
+            <div class="footer-column contact-info" data-aos="fade-up" data-aos-delay="400">
+                <h4>Get in Touch</h4>
+                <div class="contact-card">
+                    <div class="contact-header">
+                        <i class="fas fa-clock"></i>
+                        <span class="status-badge online">We're Online</span>
+                    </div>
+                    <ul class="contact-details">
+                        <li>
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <strong>Visit Us:</strong>
+                                <p>123 Fashion Street, Design District<br>Mumbai, Maharashtra 400001</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <strong>Call Us:</strong>
+                                <p>
+                                    <a href="tel:+919876543210">+91 98765 43210</a>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <strong>Email Us:</strong>
+                                <p>
+                                    <a href="mailto:support@yourstore.com">support@yourstore.com</a>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="contact-cta">
+                        <a href="#contact" class="contact-btn">
+                            <i class="fas fa-comments"></i>
+                            Start Live Chat
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <div class="bottom-container">
+            <div class="bottom-content">
+                <div class="copyright">
+                    <p>&copy; <span id="currentYear"></span> Your Store. All rights reserved</p>
+                </div>
+                <div class="payment-methods">
+                    <span class="payment-label">Secure Payments:</span>
+                    <div class="payment-icons">
+                        <img src="path/to/visa.png" alt="Visa" loading="lazy">
+                        <img src="path/to/mastercard.png" alt="Mastercard" loading="lazy">
+                        <img src="path/to/paypal.png" alt="PayPal" loading="lazy">
+                        <img src="path/to/upi.png" alt="UPI" loading="lazy">
+                    </div>
+                </div>
+                <div class="bottom-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <span class="separator">•</span>
+                    <a href="#terms">Terms & Conditions</a>
+                    <span class="separator">•</span>
+                    <a href="#sitemap">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+        <span class="tooltip">Back to Top</span>
+    </button>
+
+    <!-- Cookie Consent -->
+    <div class="cookie-consent" id="cookieConsent">
+        <div class="cookie-content">
+            <i class="fas fa-cookie-bite"></i>
+            <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+            <div class="cookie-buttons">
+                <button class="accept-cookies">Accept</button>
+                <button class="decline-cookies">Decline</button>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+    
+<script src="javascript/navbar.js"></script>
+<script src="javascript/footer.js"></script>
+<script src="javascript/privacy.js"></script>
+
+</body>
+</html>

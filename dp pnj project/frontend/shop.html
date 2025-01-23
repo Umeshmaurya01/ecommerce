@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop our collection of custom printed products including t-shirts, hoodies, cups, and mousepads">
+    <title>Shop - Printed Products</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> -->
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+
+
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+      <!-- Favicon -->
+      <link rel="icon" type="image/png" href="favicon.png">
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        rel="stylesheet"
+        
+    />
+</head>
+<body>
+
+            <!-- Top Search Bar Section -->
+            <div class="search-wrapper fixed w-full top-0 z-40">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+                    <div class="search-container relative">
+                        <div class="flex items-center bg-white rounded-lg shadow-sm">
+                            <div class="flex-1 relative">
+                                <input type="text" 
+                                       class="search-input w-full pl-12 pr-4 py-3 rounded-lg text-gray-700 focus:outline-none"
+                                       placeholder="Search for products, brands and more...">
+                                <div class="absolute left-4 top-1/2 transform -translate-y-1/2">
+                                    <i class="fas fa-search text-gray-400"></i>
+                                </div>
+                            </div>
+                            <div class="px-4 border-l border-gray-200">
+                                <select class="py-3 text-gray-600 focus:outline-none bg-transparent">
+                                    <option>All Categories</option>
+                                    <option>Men</option>
+                                    <option>Women</option>
+                                    <option>Accessories</option>
+                                </select>
+                            </div>
+                        </div>
+        
+                        <!-- Search Suggestions -->
+                        <div class="search-suggestions absolute w-full bg-white mt-2 rounded-lg shadow-lg z-45 hidden">
+                            <!-- Recent Searches -->
+                            <div class="p-4 border-b border-gray-100">
+                                <h3 class="text-sm font-semibold text-gray-600 mb-2">Recent Searches</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="search-tag px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-600 cursor-pointer">
+                                        T-shirts
+                                    </span>
+                                    <span class="search-tag px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-600 cursor-pointer">
+                                        Hoodies
+                                    </span>
+                                    <span class="search-tag px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-600 cursor-pointer">
+                                        Jeans
+                                    </span>
+                                </div>
+                            </div>
+        
+                            <!-- Trending Searches -->
+                            <div class="p-4">
+                                <h3 class="text-sm font-semibold text-gray-600 mb-2">Trending</h3>
+                                <div class="space-y-2">
+                                    <div class="flex items-center space-x-3 p-2 hover:bg-gray-50 rounded cursor-pointer">
+                                        <i class="fas fa-trending-up text-yellow-500"></i>
+                                        <span class="text-gray-700">Summer Collection 2024</span>
+                                    </div>
+                                    <div class="flex items-center space-x-3 p-2 hover:bg-gray-50 rounded cursor-pointer">
+                                        <i class="fas fa-trending-up text-yellow-500"></i>
+                                        <span class="text-gray-700">Graphic T-shirts</span>
+                                    </div>
+                                    <div class="flex items-center space-x-3 p-2 hover:bg-gray-50 rounded cursor-pointer">
+                                        <i class="fas fa-trending-up text-yellow-500"></i>
+                                        <span class="text-gray-700">Custom Designs</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!-- Main Navigation -->
+        <nav class="nav-wrapper sticky top-[73px] bg-white shadow-md z-30">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-16">
+                    <!-- Left Section -->
+                    <div class="flex items-center">
+                        <!-- Logo -->
+                        <div class="flex-shrink-0 flex items-center">
+                            <h1 class="text-2xl font-bold text-gray-800 hover:text-yellow-400 transition-colors duration-300">
+                                BEWAKOOF
+                            </h1>
+                        </div>
+    
+                        <!-- Desktop Navigation -->
+                        <div class="hidden md:ml-6 md:flex md:space-x-4">
+                            <a href="home.html" class="nav-link px-3 py-2 text-sm font-medium text-gray-700 hover:text-yellow-500">
+                                Home
+                            </a>
+    
+                            <!-- Shop Dropdown -->
+                            <div class="nav-item relative group">
+                                <button href="shop.html" class="nav-link px-3 py-2 text-sm font-medium text-gray-700 hover:text-yellow-500 inline-flex items-center">
+                                    Shop
+                                    <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </button>
+                                <div class="nav-dropdown absolute left-0 w-56 bg-white rounded-md shadow-lg py-2 mt-2 z-35">
+                                    <div class="grid grid-cols-2 gap-2">
+                                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Men's Fashion</a>
+                                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Women's Fashion</a>
+                                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Accessories</a>
+                                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">New Arrivals</a>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <a href="#" class="nav-link px-3 py-2 text-sm font-medium text-gray-700 hover:text-yellow-500">
+                                Customize Design
+                            </a>
+    
+                            <div class="nav-item relative group">
+                                <button class="nav-link px-3 py-2 text-sm font-medium text-gray-700 hover:text-yellow-500 inline-flex items-center">
+                                    Pages
+                                    <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </button>
+                                <div class="nav-dropdown absolute left-0 w-56 bg-white rounded-md shadow-lg py-2 mt-2 z-35">
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">About Us</a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Contact</a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">FAQ</a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Privacy Policy</a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Terms & Conditions</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Right Section -->
+                    <div class="hidden md:flex items-center space-x-6">
+                        <!-- Account Dropdown -->
+                        <div class="nav-item relative group">
+                            <button class="nav-link text-gray-700 hover:text-yellow-500 flex items-center">
+                                <i class="far fa-user text-xl mr-2"></i>
+                                <span class="text-sm">Account</span>
+                            </button>
+                            <div class="nav-dropdown absolute right-0 w-48 bg-white rounded-md shadow-lg py-2 mt-2 z-35">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Profile</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Orders</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Settings</a>
+                                <div class="border-t border-gray-100 my-1"></div>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-500">Sign Out</a>
+                            </div>
+                        </div>
+    
+                        <!-- Wishlist -->
+                        <button class="nav-link text-gray-700 hover:text-yellow-500 relative">
+                            <i class="far fa-heart text-xl"></i>
+                            <span class="absolute -top-2 -right-2 bg-yellow-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">0</span>
+                        </button>
+    
+                        <!-- Cart -->
+                        <button class="nav-link text-gray-700 hover:text-yellow-500 relative">
+                            <i class="fas fa-shopping-cart text-xl"></i>
+                            <span class="absolute -top-2 -right-2 bg-yellow-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">0</span>
+                        </button>
+                    </div>
+    
+                    <!-- Mobile menu button -->
+                    <div class="flex items-center md:hidden">
+                        <button id="mobile-menu-button" class="text-gray-700 hover:text-yellow-500 focus:outline-none">
+                            <i class="fas fa-bars text-2xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu-alt fixed inset-0 invisible opacity-0 z-[60]">
+            <!-- Overlay Background -->
+            <div class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm transition-opacity"></div>
+            
+            <!-- Menu Content -->
+            <div class="menu-panel fixed right-0 top-0 bottom-0 w-[300px] bg-white transform translate-x-full transition-transform duration-300 ease-in-out">
+                <!-- Header -->
+                <div class="menu-header flex items-center justify-between p-4 border-b border-gray-100">
+                    <h2 class="text-xl font-bold text-gray-800">Menu</h2>
+                    <button id="mobile-menu-close" class="close-btn p-2 rounded-full hover:bg-gray-100 transition-colors">
+                        <i class="fas fa-times text-xl text-gray-600"></i>
+                    </button>
+                </div>
+    
+                <!-- Menu Content Wrapper -->
+                <div class="menu-content h-[calc(100%-64px)] overflow-y-auto">
+                    <!-- User Section -->
+                    <div class="user-section p-4 bg-gray-50">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <div class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center">
+                                <i class="far fa-user text-yellow-600"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-600">Welcome</p>
+                                <button class="text-yellow-600 font-medium hover:text-yellow-700">Sign In / Register</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Navigation Links -->
+                    <nav class="py-2">
+                        <!-- Home -->
+                        <a href="#" class="menu-item flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50">
+                            <i class="fas fa-home w-6"></i>
+                            <span>Home</span>
+                        </a>
+    
+                        <!-- Shop Dropdown -->
+                        <div class="menu-dropdown">
+                            <button class="menu-item w-full flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-gray-50">
+                                <div class="flex items-center">
+                                    <i class="fas fa-shopping-bag w-6"></i>
+                                    <span>Shop</span>
+                                </div>
+                                <i class="fas fa-chevron-down text-sm transition-transform"></i>
+                            </button>
+                            <div class="submenu hidden bg-gray-50">
+                                <a href="#" class="submenu-item block px-4 py-2 pl-12 text-gray-600 hover:bg-gray-100">
+                                    Men's Fashion
+                                </a>
+                                <a href="#" class="submenu-item block px-4 py-2 pl-12 text-gray-600 hover:bg-gray-100">
+                                    Women's Fashion
+                                </a>
+                                <a href="#" class="submenu-item block px-4 py-2 pl-12 text-gray-600 hover:bg-gray-100">
+                                    Accessories
+                                </a>
+                                <a href="#" class="submenu-item block px-4 py-2 pl-12 text-gray-600 hover:bg-gray-100">
+                                    New Arrivals
+                                </a>
+                            </div>
+    
+    
+                            <button class="menu-item w-full flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-gray-50">
+                                <div class="flex items-center">
+                                    <i class="fas fa-file-alt w-6"></i>
+                                    <span>Pages</span>
+                                </div>
+                                <i class="fas fa-chevron-down text-sm transition-transform"></i>
+                            </button>
+                            <div class="submenu hidden bg-gray-50">
+                                <a href="#" class="submenu-item block px-4 py-2 pl-12 text-gray-600 hover:bg-gray-100">About Us</a>
+                                <a href="#" class="submenu-item block px-4 py-2 pl-12 text-gray-600 hover:bg-gray-100">Contact</a>
+                                <a href="#" class="submenu-item block px-4 py-2 pl-12 text-gray-600 hover:bg-gray-100">FAQ</a>
+                                <a href="#" class="submenu-item block px-4 py-2 pl-12 text-gray-600 hover:bg-gray-100">Privacy Policy</a>
+                                <a href="#" class="submenu-item block px-4 py-2 pl-12 text-gray-600 hover:bg-gray-100">Terms & Conditions</a>
+                            </div>
+                        </div>
+    
+                        
+    
+                        <!-- Other Links -->
+                        <a href="#" class="menu-item flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50">
+                            <i class="fas fa-palette w-6"></i>
+                            <span>Customize Design</span>
+                        </a>
+                        <a href="#" class="menu-item flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50">
+                            <i class="fas fa-heart w-6"></i>
+                            <span>Wishlist</span>
+                        </a>
+                        <a href="#" class="menu-item flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50">
+                            <i class="fas fa-shopping-cart w-6"></i>
+                            <span>Cart</span>
+                        </a>
+                    </nav>
+    
+                    <!-- Bottom Section -->
+                    <div class="border-t border-gray-100 p-4 mt-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <a href="#" class="flex items-center text-gray-600 hover:text-yellow-600">
+                                <i class="fas fa-headset mr-2"></i>
+                                <span>Support</span>
+                            </a>
+                            <a href="#" class="flex items-center text-gray-600 hover:text-yellow-600">
+                                <i class="fas fa-cog mr-2"></i>
+                                <span>Settings</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-- Mobile Filter Toggle -->
+   <button class="cpr-filter-toggle" aria-label="Toggle Filters">
+    <i class="fas fa-filter"></i>
+    <span>Filters</span>
+</button>
+
+<!-- Filter Overlay -->
+<div class="cpr-filter-overlay"></div>
+
+<div class="cpr-shop-container">
+    <!-- Filter Sidebar -->
+    <aside class="cpr-filter-sidebar">
+        <div class="cpr-filter-header">
+            <h2><i class="fas fa-sliders-h"></i> Shop Filters</h2>
+            <button class="cpr-close-filters" aria-label="Close Filters">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <!-- Active Filters -->
+        <div class="cpr-active-filters-section">
+            <h3><i class="fas fa-tag"></i> Active Filters</h3>
+            <div class="cpr-active-filters"></div>
+            <button class="cpr-reset-filters" onclick="resetFilters()">
+                <i class="fas fa-undo"></i> Reset All
+            </button>
+        </div>
+
+        <!-- Product Type Filter -->
+        <div class="cpr-filter-section" id="cpr-product-type-filter">
+            <div class="cpr-filter-section-header">
+                <h3><i class="fas fa-tshirt"></i> Product Type</h3>
+                <span class="cpr-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="cpr-filter-options">
+                <label class="cpr-filter-option">
+                    <input type="checkbox" data-filter-type="product" value="T-Shirts">
+                    <span class="cpr-checkmark"></span>
+                    <span class="cpr-label-text">Printed T-Shirts</span>
+                    <span class="cpr-count">(125)</span>
+                </label>
+                <label class="cpr-filter-option">
+                    <input type="checkbox" data-filter-type="product" value="Hoodies">
+                    <span class="cpr-checkmark"></span>
+                    <span class="cpr-label-text">Hoodies</span>
+                    <span class="cpr-count">(84)</span>
+                </label>
+                <label class="cpr-filter-option">
+                    <input type="checkbox" data-filter-type="product" value="Cups">
+                    <span class="cpr-checkmark"></span>
+                    <span class="cpr-label-text">Cups</span>
+                    <span class="cpr-count">(56)</span>
+                </label>
+                <label class="cpr-filter-option">
+                    <input type="checkbox" data-filter-type="product" value="MousePads">
+                    <span class="cpr-checkmark"></span>
+                    <span class="cpr-label-text">Mouse Pads</span>
+                    <span class="cpr-count">(32)</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Color Filter -->
+        <div class="cpr-filter-section" id="cpr-color-filter">
+            <div class="cpr-filter-section-header">
+                <h3><i class="fas fa-palette"></i> Color</h3>
+                <span class="cpr-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="cpr-filter-options cpr-color-options">
+                <button class="cpr-color-btn" data-color="black" style="background-color: #000000;">
+                    <span class="cpr-color-name">Black</span>
+                </button>
+                <button class="cpr-color-btn" data-color="white" style="background-color: #ffffff;">
+                    <span class="cpr-color-name">White</span>
+                </button>
+                <button class="cpr-color-btn" data-color="yellow" style="background-color: #ffeb3b;">
+                    <span class="cpr-color-name">Yellow</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Price Range Filter -->
+        <div class="cpr-filter-section" id="cpr-price-filter">
+            <div class="cpr-filter-section-header">
+                <h3><i class="fas fa-dollar-sign"></i> Price Range</h3>
+                <span class="cpr-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="cpr-filter-options">
+                <div class="cpr-price-range">
+                    <div class="cpr-price-slider"></div>
+                    <div class="cpr-price-inputs">
+                        <div class="cpr-price-input-group">
+                            <label for="cpr-price-min">Min</label>
+                            <input type="number" id="cpr-price-min-input" min="0" max="1000" value="0">
+                        </div>
+                        <div class="cpr-price-input-group">
+                            <label for="cpr-price-max">Max</label>
+                            <input type="number" id="cpr-price-max-input" min="0" max="1000" value="1000">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Design Theme Filter -->
+        <div class="cpr-filter-section" id="cpr-theme-filter">
+            <div class="cpr-filter-section-header">
+                <h3><i class="fas fa-paint-brush"></i> Design Theme</h3>
+                <span class="cpr-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="cpr-filter-options">
+                <label class="cpr-filter-option">
+                    <input type="checkbox" data-filter-type="theme" value="Minimalist">
+                    <span class="cpr-checkmark"></span>
+                    <span class="cpr-label-text">Minimalist</span>
+                </label>
+                <label class="cpr-filter-option">
+                    <input type="checkbox" data-filter-type="theme" value="Artistic">
+                    <span class="cpr-checkmark"></span>
+                    <span class="cpr-label-text">Artistic</span>
+                </label>
+                <label class="cpr-filter-option">
+                    <input type="checkbox" data-filter-type="theme" value="Typography">
+                    <span class="cpr-checkmark"></span>
+                    <span class="cpr-label-text">Typography</span>
+                </label>
+                <label class="cpr-filter-option">
+                    <input type="checkbox" data-filter-type="theme" value="Abstract">
+                    <span class="cpr-checkmark"></span>
+                    <span class="cpr-label-text">Abstract</span>
+                </label>
+                <label class="cpr-filter-option">
+                    <input type="checkbox" data-filter-type="theme" value="Custom">
+                    <span class="cpr-checkmark"></span>
+                    <span class="cpr-label-text">Custom Design</span>
+                </label>
+            </div>
+        </div>
+    </aside>
+
+
+    <!-- Main Content Area -->
+    <main class="cpr-product-grid-section">
+        <div class="cpr-product-grid">
+            <!-- Product Card 1 - Mousepad -->
+            <article class="cpr-product-card" data-aos="fade-up" data-product-type="MousePads" data-color="black" data-theme="Abstract" data-price="100">
+                <div class="cpr-product-card-inner">
+                    <div class="cpr-badge">HOT DEAL</div>
+                    
+                    <div class="cpr-wishlist-btn">
+                        <button class="cpr-heart-btn" aria-label="Add to Wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+
+                    <div class="cpr-product-image">
+                        <img src="../frontend/imagesss/pad 3.jpg" alt="Ergonomic Mousepad" loading="lazy">
+                        <div class="cpr-product-actions">
+                            <button class="cpr-quick-view-btn" aria-label="Quick View">
+                                <i class="fas fa-eye"></i>
+                                <span>Quick View</span>
+                            </button>
+                            <button class="cpr-add-to-cart-btn" aria-label="Add to Cart">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cpr-product-details">
+                        <h3 class="cpr-product-title">Ergonomic Mousepad</h3>
+                        <div class="cpr-price-container">
+                            <div class="cpr-price-group">
+                                <span class="cpr-current-price">₹299</span>
+                                <span class="cpr-original-price">₹699</span>
+                            </div>
+                            <span class="cpr-discount">60% OFF</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product Card 2 - Cup -->
+            <article class="cpr-product-card" data-aos="fade-up" data-aos-delay="100" data-product-type="Cups" data-color="white" data-theme="Custom">
+                <div class="cpr-product-card-inner">
+                    <div class="cpr-badge">NEW</div>
+                    
+                    <div class="cpr-wishlist-btn">
+                        <button class="cpr-heart-btn" aria-label="Add to Wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+
+                    <div class="cpr-product-image">
+                        <img src="../frontend/imagesss/cup 3.jpg" alt="Vintage Ceramic Cup" loading="lazy">
+                        <div class="cpr-product-actions">
+                            <button class="cpr-quick-view-btn" aria-label="Quick View">
+                                <i class="fas fa-eye"></i>
+                                <span>Quick View</span>
+                            </button>
+                            <button class="cpr-add-to-cart-btn" aria-label="Add to Cart">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cpr-product-details">
+                        <h3 class="cpr-product-title">Vintage Ceramic Cup</h3>
+                        <div class="cpr-price-container">
+                            <div class="cpr-price-group">
+                                <span class="cpr-current-price">₹349</span>
+                                <span class="cpr-original-price">₹699</span>
+                            </div>
+                            <span class="cpr-discount">50% OFF</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product Card 3 - Hoodie -->
+            <article class="cpr-product-card" data-aos="fade-up" data-aos-delay="200" data-product-type="Hoodies" data-color="white" data-theme="Custom">
+                <div class="cpr-product-card-inner">
+                    <div class="cpr-badge">TRENDING</div>
+                    
+                    <div class="cpr-wishlist-btn">
+                        <button class="cpr-heart-btn" aria-label="Add to Wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+
+                    <div class="cpr-product-image">
+                        <img src="../frontend/imagesss/hoody 2.jpg" alt="Designer Hoodie" loading="lazy">
+                        <div class="cpr-product-actions">
+                            <button class="cpr-quick-view-btn" aria-label="Quick View">
+                                <i class="fas fa-eye"></i>
+                                <span>Quick View</span>
+                            </button>
+                            <button class="cpr-add-to-cart-btn" aria-label="Add to Cart">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cpr-product-details">
+                        <h3 class="cpr-product-title">Designer Hoodie</h3>
+                        <div class="cpr-price-container">
+                            <div class="cpr-price-group">
+                                <span class="cpr-current-price">₹399</span>
+                                <span class="cpr-original-price">₹999</span>
+                            </div>
+                            <span class="cpr-discount">60% OFF</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product Card 4 - T-Shirt -->
+            <article class="cpr-product-card" data-aos="fade-up" data-aos-delay="300" data-product-type="T-Shirts" data-color="black" data-theme="Minimalist">
+                <div class="cpr-product-card-inner">
+                    <div class="cpr-badge">BESTSELLER</div>
+                    
+                    <div class="cpr-wishlist-btn">
+                        <button class="cpr-heart-btn" aria-label="Add to Wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+
+                    <div class="cpr-product-image">
+                        <img src="../frontend/imagesss/tshirt 3.jpg" alt="tshirt" loading="lazy">
+                        <div class="cpr-product-actions">
+                            <button class="cpr-quick-view-btn" aria-label="Quick View">
+                                <i class="fas fa-eye"></i>
+                                <span>Quick View</span>
+                            </button>
+                            <button class="cpr-add-to-cart-btn" aria-label="Add to Cart">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cpr-product-details">
+                        <h3 class="cpr-product-title">Classic Black T-Shirt</h3>
+                        <div class="cpr-price-container">
+                            <div class="cpr-price-group">
+                                <span class="cpr-current-price">₹499</span>
+                                <span class="cpr-original-price">₹899</span>
+                            </div>
+                            <span class="cpr-discount">45% OFF</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+
+        </div>
+    </main>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer Section -->
+<footer class="main-footer" id="mainFooter">
+    <!-- Footer Pattern Overlay -->
+    <div class="footer-pattern">
+        <div class="pattern-overlay"></div>
+    </div>
+
+    <!-- Newsletter Bar -->
+    <div class="footer-newsletter" data-aos="fade-up">
+        <div class="newsletter-container">
+            <div class="newsletter-content">
+                <div class="newsletter-badge">
+                    <span class="highlight-badge">
+                        <i class="fas fa-gift"></i>
+                        Special Offer
+                    </span>
+                </div>
+                <h3>Join Our Newsletter & Get 10% Off</h3>
+                <p>Stay updated with latest trends, exclusive offers & fashion tips</p>
+                <div class="subscriber-count">
+                    <i class="fas fa-users"></i>
+                    <span id="subscriberCount">10,000+</span> Happy Subscribers
+                </div>
+            </div>
+
+            <form class="footer-subscribe-form" id="newsletterForm">
+                <div class="footer-input-group">
+                    <div class="input-wrapper">
+                        <i class="far fa-envelope input-icon"></i>
+                        <input 
+                            type="email" 
+                            id="newsletterEmail" 
+                            placeholder="Enter your email"
+                            required 
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                        >
+                        <div class="input-status">
+                            <i class="fas fa-check-circle success"></i>
+                            <i class="fas fa-times-circle error"></i>
+                        </div>
+                    </div>
+                    <button type="submit" class="subscribe-btn">
+                        <span class="btn-text">Subscribe Now</span>
+                        <i class="fas fa-paper-plane btn-icon"></i>
+                        <div class="btn-loader"></div>
+                    </button>
+                </div>
+                <div class="form-message"></div>
+                <div class="privacy-note">
+                    <i class="fas fa-lock"></i>
+                    We respect your privacy. Unsubscribe at any time.
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Footer Content -->
+    <div class="footer-main">
+        <div class="footer-container">
+            <!-- Company Info Column -->
+            <div class="footer-column company-info" data-aos="fade-up" data-aos-delay="100">
+                <div class="footer-logo">
+                    <img src="path/to/logo.png" alt="Company Logo" loading="lazy">
+                </div>
+                <p class="company-desc">
+                    Crafting premium custom apparel since 2010. We blend quality materials 
+                    with innovative design to create unique pieces that tell your story.
+                </p>
+                <div class="company-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">10K+</span>
+                        <span class="stat-label">Happy Customers</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15K+</span>
+                        <span class="stat-label">Products Delivered</span>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-btn" aria-label="Facebook" data-tooltip="Follow on Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-btn" aria-label="Instagram" data-tooltip="Follow on Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-btn" aria-label="Twitter" data-tooltip="Follow on Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-btn" aria-label="Pinterest" data-tooltip="Follow on Pinterest">
+                        <i class="fab fa-pinterest-p"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links Column -->
+            <div class="footer-column quick-links" data-aos="fade-up" data-aos-delay="200">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li>
+                        <a href="#home">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>About Us</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#products">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Products</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#custom">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Custom Design</span>
+                            <span class="link-badge">Hot</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#blog">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Blog</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Customer Service Column -->
+            <div class="footer-column customer-service" data-aos="fade-up" data-aos-delay="300">
+                <h4>Customer Service</h4>
+                <ul class="footer-links">
+                    <li>
+                        <a href="#track" class="service-link">
+                            <i class="fas fa-truck"></i>
+                            <div class="link-content">
+                                <span class="link-title">Track Order</span>
+                                <span class="link-desc">Check your order status</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#shipping" class="service-link">
+                            <i class="fas fa-box"></i>
+                            <div class="link-content">
+                                <span class="link-title">Shipping Policy</span>
+                                <span class="link-desc">Free shipping over ₹999</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#returns" class="service-link">
+                            <i class="fas fa-exchange-alt"></i>
+                            <div class="link-content">
+                                <span class="link-title">Returns & Exchange</span>
+                                <span class="link-desc">Easy 30 days return</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#help" class="service-link">
+                            <i class="fas fa-headset"></i>
+                            <div class="link-content">
+                                <span class="link-title">24/7 Support</span>
+                                <span class="link-desc">We're here to help</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contact Info Column -->
+            <div class="footer-column contact-info" data-aos="fade-up" data-aos-delay="400">
+                <h4>Get in Touch</h4>
+                <div class="contact-card">
+                    <div class="contact-header">
+                        <i class="fas fa-clock"></i>
+                        <span class="status-badge online">We're Online</span>
+                    </div>
+                    <ul class="contact-details">
+                        <li>
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <strong>Visit Us:</strong>
+                                <p>123 Fashion Street, Design District<br>Mumbai, Maharashtra 400001</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <strong>Call Us:</strong>
+                                <p>
+                                    <a href="tel:+919876543210">+91 98765 43210</a>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <strong>Email Us:</strong>
+                                <p>
+                                    <a href="mailto:support@yourstore.com">support@yourstore.com</a>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="contact-cta">
+                        <a href="#contact" class="contact-btn">
+                            <i class="fas fa-comments"></i>
+                            Start Live Chat
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <div class="bottom-container">
+            <div class="bottom-content">
+                <div class="copyright">
+                    <p>&copy; <span id="currentYear"></span> Your Store. All rights reserved</p>
+                </div>
+                <div class="payment-methods">
+                    <span class="payment-label">Secure Payments:</span>
+                    <div class="payment-icons">
+                        <img src="path/to/visa.png" alt="Visa" loading="lazy">
+                        <img src="path/to/mastercard.png" alt="Mastercard" loading="lazy">
+                        <img src="path/to/paypal.png" alt="PayPal" loading="lazy">
+                        <img src="path/to/upi.png" alt="UPI" loading="lazy">
+                    </div>
+                </div>
+                <div class="bottom-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <span class="separator">•</span>
+                    <a href="#terms">Terms & Conditions</a>
+                    <span class="separator">•</span>
+                    <a href="#sitemap">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+        <span class="tooltip">Back to Top</span>
+    </button>
+
+    <!-- Cookie Consent -->
+    <div class="cookie-consent" id="cookieConsent">
+        <div class="cookie-content">
+            <i class="fas fa-cookie-bite"></i>
+            <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+            <div class="cookie-buttons">
+                <button class="accept-cookies">Accept</button>
+                <button class="decline-cookies">Decline</button>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+</div>
+
+<!-- ... existing code ... -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ... existing main content ... -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    <script src="javascript/navbar.js"></script>
+    <script src="javascript/footer.js"></script>
+    <script src="javascript/shop.js"></script>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js"></script>
+</body>
+</html>
